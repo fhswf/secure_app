@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242424"
+    tools:context=".MainMenu">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Schwachstellen"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="75dp">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insecure Data Storage"
+                android:id="@+id/insecure_data_storage"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insecure Communication"
+                android:id="@+id/insecure_communication"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insecure Authentication"
+                android:id="@+id/insecure_authentication"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insecure Authorization"
+                android:id="@+id/insecure_authorization"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Client Side Injection"
+                android:id="@+id/client_side_injection_button_xml"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Security Decisions Via Untrusted Inputs"
+                android:id="@+id/security_decisions_via_untrusted_inputs"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Weitere Informationen"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Danksagungen"
+                android:id="@+id/button_danksagungen_xml"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weiterführende Links"
+                android:id="@+id/button_links_xml"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hinweise zum Datenschutz"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

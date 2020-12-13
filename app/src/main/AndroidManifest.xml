@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sichereandroidapplikation">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Weiterfuehrende_Links"></activity>
+        <activity android:name=".Danksagungen" />
+        <activity android:name=".API_Test" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".client_side_injection" />
+        <activity android:name=".SQLcipher_database" />
+        <activity android:name=".code_tampering" />
+        <activity android:name=".SharedPrefsTest" />
+        <activity android:name=".insecure_authorization" />
+        <activity android:name=".insecure_authentication" />
+        <activity android:name=".insecure_communication" />
+        <activity android:name=".insecure_data_storage" />
+        <activity android:name=".improper_platform_usage" />
+        <activity android:name=".MainMenu" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

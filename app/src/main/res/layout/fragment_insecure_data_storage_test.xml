@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".insecure_data_storage_test">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent">
+
+
+     <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/test_insecure_data_storage"
+            android:id="@+id/view"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+        />
+
+        <Button
+            android:id="@+id/button_shared_prefs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shared Preferences"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_below="@id/view">
+        </Button>
+
+        <Button
+            android:id="@+id/button_sqlite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SQLite"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_below="@id/button_shared_prefs">
+        </Button>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
