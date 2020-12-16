@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,20 +7,115 @@
     tools:context=".Weiterfuehrende_Links"
     android:background="#242424">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="417dp"
-        android:layout_height="375dp"
-        android:layout_marginTop="159dp"
-        android:layout_marginBottom="88dp"
-        android:gravity="center"
-        android:text="@string/links"
-        android:textColor="#FFFFFF"
-        android:textSize="19sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Danksagungen und Links"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="75dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/danksagungen"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/link_FH_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/link_fh_homepage"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/link_gawon_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/link_gawron"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/link_kubek_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/link_kubek"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/link_owasp_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/link_owasp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/link_android_security_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/link_android_security"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/link_auth0_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/link_auth0"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

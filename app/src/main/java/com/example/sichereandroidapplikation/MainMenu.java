@@ -17,7 +17,7 @@ import android.widget.Button;
 
 public class MainMenu extends AppCompatActivity {
     private Button button_insecure_data_storage, button_insecure_communication, button_insecure_authentication,
-            button_insecure_authorization, button_client_side_injection, button_danksagungen, button_weiterfuehrende_links;
+            button_insecure_authorization, button_client_side_injection, button_danksagungen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class MainMenu extends AppCompatActivity {
         button_insecure_data_storage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity3();
+                open_insecure_data_storage_activity();
             }
         });
 
@@ -36,7 +36,7 @@ public class MainMenu extends AppCompatActivity {
         button_insecure_communication.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity4();
+                open_insecure_communication_activity();
             }
         });
 
@@ -64,16 +64,8 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        button_danksagungen = (Button) findViewById(R.id.button_danksagungen_xml);
+        button_danksagungen = (Button) findViewById(R.id.button_danksagungen_links_xml);
         button_danksagungen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openDanksagungenActivity();
-            }
-        });
-
-        button_weiterfuehrende_links = (Button) findViewById(R.id.button_links_xml);
-        button_weiterfuehrende_links .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openLinkActivity();
@@ -82,11 +74,6 @@ public class MainMenu extends AppCompatActivity {
 
     }
 
-    public void openDanksagungenActivity()
-    {
-        Intent intent = new Intent(this, Danksagungen.class);
-        startActivity(intent);
-    }
 
     public void openLinkActivity()
     {
@@ -94,13 +81,13 @@ public class MainMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openActivity3()
+    public void open_insecure_data_storage_activity()
     {
         Intent intent = new Intent(this, insecure_data_storage.class);
         startActivity(intent);
     }
 
-    public void openActivity4()
+    public void open_insecure_communication_activity()
     {
         Intent intent = new Intent(this, insecure_communication.class);
         startActivity(intent);

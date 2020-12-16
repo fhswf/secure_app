@@ -138,14 +138,37 @@
     </string>
 
     <string name="danksagungen">
-        Besonderer Dank geht an Dr. Mario Kubek, welcher mir dieses Thema vorgeschlagen und mir hilfreiche Tipps im Bereich Mobile Security gegeben hat.
+        Besonderer Dank geht an Dr. Mario Kubek, welcher mir dieses Thema vorgeschlagen und hilfreiche Tipps im Bereich Mobile Security gegeben hat.
         \n \n
         Weiterhin bedanke ich mich bei Prof. Dr. Christian Gawron für die Hilfestellungen im Bereich des Hostings und zur Veröffentlichung dieser Applikation.
     </string>
 
-    <string name="links">
-        <URL><![CDATA[http://www.mysite.com/page?id=1]]></URL>
+    <string name="link_fh_homepage">
+       <a href="https://www.fh-swf.de">Homepage der Fachhochschule Südwestfalen</a>
     </string>
+
+    <string name="link_gawron">
+       <a href="https://www4.fh-swf.de/de/home/ueber_uns/standorte/is/fb_in/doz_in/profs_in/gawron/index.php">FH-Homepage von Prof. Dr. Christian Gawron</a>
+    </string>
+
+    <string name="link_kubek">
+       <a href="https://www.fernuni-hagen.de/mi/fakultaet/lehrende/kubek/index.shtml#">FernUni-Homepage von Dr. Mario Kubek</a>
+    </string>
+
+    <string name="link_owasp">
+       <a href="https://owasp.org/">Homepage des OWASP</a>
+    </string>
+
+    <string name="link_android_security">
+        <a href="https://developer.android.com/security">Sicherheitstipps der Android-Plattform</a>
+    </string>
+
+    <string name="link_auth0">
+        <a href="https://auth0.com/de/">Auth0.com</a>
+    </string>
+
+
+
 
     <string name="com_auth0_client_id">0kWtHmLURySF83cUfki2iZPjh8L4Inun</string>
     <string name="com_auth0_domain">dev-dqjyvzmz.eu.auth0.com</string>

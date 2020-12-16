@@ -37,7 +37,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Insecure Data Storage"
+                android:text="Datenspeicherung"
                 android:id="@+id/insecure_data_storage"
                 android:textColor="@color/black"
                 android:textAlignment="center"
@@ -47,7 +47,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Insecure Communication"
+                android:text="Abgesicherte Backend-Kommunikation"
                 android:id="@+id/insecure_communication"
                 android:textColor="@color/black"
                 android:textAlignment="center"
@@ -57,7 +57,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Insecure Authentication"
+                android:text="Authentifizierung mit JWT"
                 android:id="@+id/insecure_authentication"
                 android:textColor="@color/black"
                 android:textAlignment="center"
@@ -74,11 +74,10 @@
                 android:textSize="20sp">
             </Button>
 
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Client Side Injection"
+                android:text="XSS und SQLi"
                 android:id="@+id/client_side_injection_button_xml"
                 android:textColor="@color/black"
                 android:textAlignment="center"
@@ -109,18 +108,8 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Danksagungen"
-                android:id="@+id/button_danksagungen_xml"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:textSize="20sp">
-            </Button>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Weiterführende Links"
-                android:id="@+id/button_links_xml"
+                android:text="Danksagungen und Weiterführende Links"
+                android:id="@+id/button_danksagungen_links_xml"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="20sp">
