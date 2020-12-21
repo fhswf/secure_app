@@ -21,7 +21,7 @@ public class PageAdapter_communication extends FragmentPagerAdapter
         {
             case 0 : return new insecure_communication_beschreibung();
             case 1 : return new insecure_communcation_vermeidung();
-            case 2 : return new ftab3();
+            case 2 : return new insecure_communication_test();
             default: return null;
         }
     }

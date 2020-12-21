@@ -167,7 +167,11 @@
         <a href="https://auth0.com/de/">Auth0.com</a>
     </string>
 
-
+    <string name="xss_sqli_text">
+        Im folgenden können Cross Site Scripting (XSS) und SQLite-Injections getestet werden.
+        \n
+        Dazu einfach auf den gewünschten Button klicken und den dortigen Anweisungen folgen.
+    </string>
 
 
     <string name="com_auth0_client_id">0kWtHmLURySF83cUfki2iZPjh8L4Inun</string>

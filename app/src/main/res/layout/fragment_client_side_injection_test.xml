@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".client_side_injection_test">
+    tools:context=".client_side_injection_test"
+    android:background="#242424">
 
-    <!-- TODO: Update blank fragment layout -->
-    <WebView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webView"></WebView>
+        android:layout_height="100dp"
+        android:text="@string/xss_sqli_text"
+        android:id="@+id/view"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/button_xss_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cross Site Scripting (XSS)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_below="@id/view">
+    </Button>
+
+    <Button
+        android:id="@+id/sqlite_injection_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SQLite-Injection"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_below="@id/button_xss_xml">
+    </Button>
+
+
+</RelativeLayout>

@@ -1,6 +1,5 @@
 package com.example.sichereandroidapplikation;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,16 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link client_side_injection_test#newInstance} factory method to
+ * Use the {@link insecure_communication_test#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class client_side_injection_test extends Fragment {
-    private Button button_sqli, button_xss;
+public class insecure_communication_test extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +26,7 @@ public class client_side_injection_test extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public client_side_injection_test() {
+    public insecure_communication_test() {
         // Required empty public constructor
     }
 
@@ -40,11 +36,11 @@ public class client_side_injection_test extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment client_side_injection_test.
+     * @return A new instance of fragment insecure_communication_test.
      */
     // TODO: Rename and change types and number of parameters
-    public static client_side_injection_test newInstance(String param1, String param2) {
-        client_side_injection_test fragment = new client_side_injection_test();
+    public static insecure_communication_test newInstance(String param1, String param2) {
+        insecure_communication_test fragment = new insecure_communication_test();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,26 +60,15 @@ public class client_side_injection_test extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+            //Initialisiert einen WebView in einem Fragment
+            View v = inflater.inflate(R.layout.fragment_insecure_communication_test, container, false);
+            WebView webView = (WebView)v.findViewById(R.id.webView_communication);
+            //Deaktiviert JavaScript im WebView
+            webView.getSettings().setJavaScriptEnabled(false);
+            webView.setWebChromeClient(new WebChromeClient());
+            webView.loadUrl("http://10.0.2.2:3000/insecure_communication_test");
 
-        View view = inflater.inflate(R.layout.fragment_client_side_injection_test, container,false);
+            return v;
 
-        button_sqli = (Button)view.findViewById(R.id.sqlite_injection_xml);
-        button_sqli.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent in = new Intent(getActivity(), SharedPrefsTest.class);
-                startActivity(in);
-            }
-        });
-
-        button_xss = (Button)view.findViewById(R.id.button_xss_xml);
-        button_xss.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent in = new Intent(getActivity(), SQLcipher_database.class);
-                startActivity(in);
-            }
-        });
-
-        return view;
     }
 }
