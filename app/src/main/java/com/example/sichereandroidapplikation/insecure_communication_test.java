@@ -1,5 +1,6 @@
 package com.example.sichereandroidapplikation;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,19 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +28,8 @@ import android.webkit.WebView;
  * create an instance of this fragment.
  */
 public class insecure_communication_test extends Fragment {
+
+    private Button open_api_activity;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,20 +69,26 @@ public class insecure_communication_test extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
+
+    StringBuilder sb = new StringBuilder();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-            //Initialisiert einen WebView in einem Fragment
-            View v = inflater.inflate(R.layout.fragment_insecure_communication_test, container, false);
-            WebView webView = (WebView)v.findViewById(R.id.webView_communication);
-            //Deaktiviert JavaScript im WebView
-            webView.getSettings().setJavaScriptEnabled(false);
-            webView.setWebChromeClient(new WebChromeClient());
-            webView.loadUrl("http://10.0.2.2:3000/insecure_communication_test");
+        // Inflate the layout for this fragment
 
-            return v;
+        View view = inflater.inflate(R.layout.fragment_insecure_communication_test, container, false);
 
+        open_api_activity = (Button) view.findViewById(R.id.button_insecure_communication_test);
+        open_api_activity.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), insecure_communication_test_https.class);
+                startActivity(in);
+            }
+        });
+
+        return view;
     }
 }

@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">SichereAndroidApplikation</string>
+    <string name="app_name">SecureApp</string>
+
 
     <string name="home_text">
 
@@ -10,7 +11,7 @@
 
             Jede Schwachstelle enthält eine Kurzbeschreibung sowie eine Anleitung zum Testen in dieser Applikation. \n\n
 
-            Mit einem Klick auf den Start-Button öffnet sich ein Hauptmenü, aus der die einzelne Schwachstelle geöffnet werden können. \n\n
+            Mit einem Klick auf den Start-Button öffnet sich ein Hauptmenü, aus der die einzelne Schwachstelle heraus geöffnet werden können. \n\n
 
             Viel Spaß! ;)
 
@@ -20,7 +21,6 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_improper_platform_usage1">improper_platform_usage1</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="beschreibung_improper_platform_usage">
@@ -171,6 +171,14 @@
         Im folgenden können Cross Site Scripting (XSS) und SQLite-Injections getestet werden.
         \n
         Dazu einfach auf den gewünschten Button klicken und den dortigen Anweisungen folgen.
+    </string>
+
+    <string name="insecure_communication_test_string">
+        Hier kann die verschlüsselte Kommunikation zum Backend getestet werden.
+        \n
+        Das Backend stellt das aktuelle Datum sowie die Uhrzeit zur Verfügung. Beide Daten werden in der nächsten Activity ausgegeben.
+        \n
+        Zum Testen der Verschlüsselung kann auf die Burp Suite zurückgegriffen werden. Hier wird ausschließlich eine verschlüsselte Kommunikation zu sehen sein.
     </string>
 
 

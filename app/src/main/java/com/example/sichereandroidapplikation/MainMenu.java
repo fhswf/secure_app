@@ -40,21 +40,21 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        button_insecure_authentication = (Button) findViewById(R.id.insecure_authentication);
+        button_insecure_authentication = (Button) findViewById(R.id.insecure_authentication_jwt);
         button_insecure_authentication.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivity5();
-            }
-        });
-
-        button_insecure_authorization = (Button) findViewById(R.id.insecure_authorization);
-        button_insecure_authorization.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openActivity6();
             }
         });
+
+/*        button_insecure_authorization = (Button) findViewById(R.id.insecure_authorization);
+        button_insecure_authorization.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity6();
+            }
+        });*/
 
         button_client_side_injection = (Button) findViewById(R.id.client_side_injection_button_xml);
         button_client_side_injection.setOnClickListener(new View.OnClickListener() {

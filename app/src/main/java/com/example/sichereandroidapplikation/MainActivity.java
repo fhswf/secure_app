@@ -13,7 +13,9 @@ package com.example.sichereandroidapplikation;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
@@ -45,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 openMainMenu();
             }
         });
-
     }
 
     /**

@@ -58,17 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Authentifizierung mit JWT"
-                android:id="@+id/insecure_authentication"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:textSize="20sp">
-            </Button>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Insecure Authorization"
-                android:id="@+id/insecure_authorization"
+                android:id="@+id/insecure_authentication_jwt"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="20sp">
@@ -84,16 +74,6 @@
                 android:textSize="20sp">
             </Button>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Security Decisions Via Untrusted Inputs"
-                android:id="@+id/security_decisions_via_untrusted_inputs"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:textSize="20sp">
-            </Button>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -101,9 +81,19 @@
                 android:textSize="30dp"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="100dp"
                 android:layout_marginLeft="10dp">
             </TextView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wie starten?"
+                android:id="@+id/button_how_to_start_xml"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp">
+            </Button>
 
             <Button
                 android:layout_width="match_parent"
@@ -123,6 +113,18 @@
                 android:textAlignment="center"
                 android:textSize="20sp">
             </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="made with ♥ by Marcel Hopp in 2020"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
         </LinearLayout>
 
     </RelativeLayout>
