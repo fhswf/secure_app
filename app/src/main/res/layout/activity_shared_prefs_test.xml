@@ -30,9 +30,9 @@
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="0"
-            app:cardBackgroundColor="#242424"
+            app:cardBackgroundColor="@color/black"
             android:layout_gravity="fill"
-            android:background="@color/white"
+            android:background="@color/black"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
@@ -48,13 +48,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="Eingabe-String"
+                    android:paddingLeft="20dp"
                     android:textColorHint="@color/white"
                     android:background="@drawable/edit_text"
                     android:id="@+id/eingabe_string_shared_prefs">
                 </EditText>
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Speichern"
                     android:id="@+id/speicherbutton_shared_prefs"></Button>
             </LinearLayout>
@@ -69,7 +70,7 @@
             android:background="@color/white"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            app:cardBackgroundColor="#242424"
+            app:cardBackgroundColor="@color/black"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
@@ -80,8 +81,8 @@
                 android:gravity="center"
                 android:layout_gravity="center_vertical|center_horizontal">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:gravity="center"
                     android:hint="Gespeicherter Text in SharedPrefs"
                     android:background="@drawable/edit_text"

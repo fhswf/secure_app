@@ -11,7 +11,7 @@
 
             Jede Schwachstelle enthält eine Kurzbeschreibung sowie eine Anleitung zum Testen in dieser Applikation. \n\n
 
-            Mit einem Klick auf den Start-Button öffnet sich ein Hauptmenü, aus der die einzelne Schwachstelle heraus geöffnet werden können. \n\n
+            Mit einem Klick auf den Start-Button öffnet sich ein Hauptmenü, aus der die einzelne Schwachstelle heraus geöffnet werden kann. \n\n
 
             Viel Spaß! ;)
 
@@ -101,9 +101,9 @@
     </string>
 
     <string name="shared_prefs_text">
-        Um die Sicherheit der SharedPreferences zu testen, bitte im ersten Fenster einen beliebigen String eingeben. Anschließend wird dieser im unteren Fenster ausgegeben.
+        Um die Sicherheit der SharedPreferences zu testen, bitte im ersten Fenster einen beliebigen String eingeben. Anschließend wird dieser zur Kontrolle im unteren Fenster ausgegeben.
         \n \n
-        Die SharedPreferences lassen sich nun im Ordner /data/data/shared_prefs/encrypted_shared_prefs.xml finden. Der übergebene String wurde mit dem AES256 verschlüsselt.
+        Die SharedPreferences lassen sich nun im Ordner /data/data/shared_prefs/encrypted_shared_prefs.xml finden. Der übergebene String wurde mit dem AES256-Algorithmus verschlüsselt.
     </string>
 
     <string name="sqlite_test">
@@ -133,8 +133,12 @@
     </string>
 
     <string name="login_dialog">
-        Mit einem Klick auf den Button LOGIN öffnet sich eine Anmeldemaske von auth0.com. Hier kann sich ein neuer Account erstellt werden, mit dem im späteren Verlauf
-        auf einen API-Endpunkt zugegriffen werden kann. Das ganze erfolgt über JSON-Web-Tokens und wird von auth0.com verwaltet.
+        Nachfolgend öffnet sich eine Anmeldemaske des Auth0.com-Dienstes. Dieser verwaltet die Benutzer für diese Applikation.
+        \n\n
+        Möchten Sie sich nicht registrieren, ist dies kein Problem - jedoch kann folglich diese Funktion nicht getestet werden.
+        \n\n
+        Nach erfolgreicher Registrierung/Anmeldung kann auf einen abgesicherten API-Endpunkt zugegriffen werden.
+        Das ganze erfolgt über JSON-Web-Tokens.
     </string>
 
     <string name="danksagungen">
@@ -193,5 +197,17 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="how_to_start">
+        Zur Benutzung dieser Applikation wird empfohlen, einen Android-Emulator auf einem Kali-Linux-System zu installieren. Kali Linux bringt Tools mit, welche für das Testen der Sicherheit dieser Applikation geeignet sind.
+        \n\n
+        Weiterhin sollte auf dem Emulator die Android Debug Bridge (ADB) installiert sein, dadurch kann auf die lokal gespeicherten Daten der Applikation zugegriffen werden.
+        \n\n
+        Selbstverständlich kann diese Applikation auch auf einem normalen Smartphone, Tablet installiert werden.
+    </string>
+
+    <string name="sqlinjection_text">
+        Im folgenden können SQL-Injections getestet werden. Anmerkung: Die Datenbank ist nicht verschlüsselt!
+    </string>
 
 </resources>

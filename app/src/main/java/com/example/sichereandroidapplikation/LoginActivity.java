@@ -93,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 Toast.makeText(LoginActivity.this, "Erfolgreich eingeloggt!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, Protected_API_Call.class);
                                 intent.putExtra(EXTRA_ACCESS_TOKEN, credentials.getAccessToken());
                                 startActivity(intent);
                                 finish();

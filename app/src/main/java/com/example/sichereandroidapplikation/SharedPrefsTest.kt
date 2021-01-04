@@ -1,6 +1,10 @@
 package com.example.sichereandroidapplikation
 
-import android.content.Context
+/**
+ * Diese Klasse implementiert die Speicherung eines Teststrings
+ * mit Hilfe der Library EncryptedSharedPreferences.
+ */
+
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
@@ -28,7 +32,10 @@ class SharedPrefsTest : AppCompatActivity() {
         }
     }
 
-    // Diese Funktion stellt die Verschlüsselungsoperationen für den übergebenen String bereit
+    /**
+     * Erstellt einen neuen Masterkey zur Ver-/ und Entschlüsselung
+     * und initialisiert eine neue Instanz der EncryptedSharedPreferences-Klasse
+     */
     private fun encryptSharedPrefs()
     {
         //Erstellt einen neuen Masterkey zur Ver-/und Entschlüsselung
@@ -45,25 +52,33 @@ class SharedPrefsTest : AppCompatActivity() {
 
     }
 
-    //Diese Funktion speichert den übergebenen String
+    /**
+     * Speichert den übergebenen String aus der GUI in den SharedPreferences.
+     */
     private fun saveData()
     {
         val insertedText = eingabe_string_shared_prefs.text.toString()
         ausgabe_shared_prefs.text = insertedText
 
-       // val sharedPreferences = getSharedPreferences(encrypted_shared_prefs, Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.apply{
-            putString("String_Key", insertedText)
-        }.apply()
+        if(insertedText.equals(""))
+        {
+            Toast.makeText(this, "Kein String übergeben!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            val editor = sharedPreferences.edit()
+            editor.apply{
+                putString("String_Key", insertedText)
+            }.apply()
 
-        Toast.makeText(this, "String gespeichert", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "String gespeichert", Toast.LENGTH_SHORT).show()
+        }
     }
 
-    //Diese Funktion lädt den zuletzt übergebenen String aus den Shared_Prefs
+    /**
+     * Lädt den zuvor übergebenen String entschlüsselt und zeigt diesen in der Activity an.
+     */
     private fun loadData()
     {
-        //val sharedPreferences = getSharedPreferences(encrypted_shared_prefs, Context.MODE_PRIVATE)
         val savedString = sharedPreferences.getString("String_Key", null)
         ausgabe_shared_prefs.text = savedString
     }

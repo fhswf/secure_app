@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".insecure_communication_test_https"></activity>
+        <activity android:name=".Protected_API_Call"></activity>
+        <activity android:name=".SQLi_Injection" />
+        <activity android:name=".HowToStart" />
+        <activity android:name=".insecure_communication_test_https" />
         <activity android:name=".Weiterfuehrende_Links" />
         <activity android:name=".Danksagungen" />
         <activity android:name=".API_Test" />

@@ -8,9 +8,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 
 /**
@@ -68,13 +65,13 @@ public class client_side_injection_test extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_client_side_injection_test, container,false);
 
-        button_sqli = (Button)view.findViewById(R.id.sqlite_injection_xml);
+     /*   button_sqli = (Button)view.findViewById(R.id.sqlite_injection_xml);
         button_sqli.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent in = new Intent(getActivity(), SharedPrefsTest.class);
+                Intent in = new Intent(getActivity(), SQLcipher_database_injection.class);
                 startActivity(in);
             }
-        });
+        });*/
 
         button_xss = (Button)view.findViewById(R.id.button_xss_xml);
         button_xss.setOnClickListener(new View.OnClickListener() {

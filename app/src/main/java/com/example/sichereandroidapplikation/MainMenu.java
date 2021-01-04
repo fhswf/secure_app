@@ -17,7 +17,7 @@ import android.widget.Button;
 
 public class MainMenu extends AppCompatActivity {
     private Button button_insecure_data_storage, button_insecure_communication, button_insecure_authentication,
-            button_insecure_authorization, button_client_side_injection, button_danksagungen;
+            button_insecure_authorization, button_client_side_injection, button_danksagungen, button_how_to_start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +72,14 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+        button_how_to_start = (Button) findViewById(R.id.button_how_to_start_xml);
+        button_how_to_start .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                open_how_to_start_activity();
+            }
+        });
+
     }
 
 
@@ -110,6 +118,11 @@ public class MainMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void open_how_to_start_activity()
+    {
+        Intent intent = new Intent(this, HowToStart.class);
+        startActivity(intent);
+    }
 
 
 }

@@ -49,6 +49,10 @@ public class SQLcipher_database extends AppCompatActivity {
 
     }
 
+    /**
+     * Funktion zum Initalisieren der verschlüsselten SQLite-Datenbank.
+     * @param password Das zuvor übergebene Passwort in der Activity.
+     */
     private void InitializeSQLCipher(String password) {
         SQLiteDatabase.loadLibs(this);
         File databaseFile = getDatabasePath("encrypted_database.db");

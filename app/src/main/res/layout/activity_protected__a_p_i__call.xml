@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".insecure_communication_test_https"
+    tools:context=".Protected_API_Call"
     android:background="#242424">
 
     <RelativeLayout
@@ -19,29 +19,20 @@
             android:layout_centerInParent="true"
             android:gravity="center"
             android:textColor="@android:color/white"
-            android:textSize="23sp"/>
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/textView_api"
+            android:id="@+id/textView_protected_api"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text=""
+            android:text="Verbindung wird hergestellt..."
             android:textColor="@android:color/white"
             android:layout_below="@id/ueberschrift"
             android:textSize="20sp"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hole Datum und Uhrzeit "
-            android:id="@+id/button_api"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:layout_below="@id/textView_api"
-            android:textSize="23sp">
-        </Button>
     </RelativeLayout>
 
-</FrameLayout>
+</RelativeLayout>
+
+
