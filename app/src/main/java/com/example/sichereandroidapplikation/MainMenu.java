@@ -17,7 +17,7 @@ import android.widget.Button;
 
 public class MainMenu extends AppCompatActivity {
     private Button button_insecure_data_storage, button_insecure_communication, button_insecure_authentication,
-            button_insecure_authorization, button_client_side_injection, button_danksagungen, button_how_to_start;
+            button_insecure_authorization, button_client_side_injection, button_danksagungen, button_how_to_start, button_datenschutz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+
         button_insecure_authentication = (Button) findViewById(R.id.insecure_authentication_jwt);
         button_insecure_authentication.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,13 +49,16 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-/*        button_insecure_authorization = (Button) findViewById(R.id.insecure_authorization);
+
+/*
+        button_insecure_authorization = (Button) findViewById(R.id.insecure_authorization);
         button_insecure_authorization.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openActivity6();
             }
-        });*/
+        });
+*/
 
         button_client_side_injection = (Button) findViewById(R.id.client_side_injection_button_xml);
         button_client_side_injection.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +84,13 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+        button_datenschutz = (Button) findViewById(R.id.button_datenschutz_xml);
+        button_datenschutz .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logout_menu_open();
+            }
+        });
     }
 
 
@@ -101,17 +112,19 @@ public class MainMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
+/*
     public void openActivity5()
     {
         Intent intent = new Intent(this, API_Test.class);
         startActivity(intent);
     }
+*/
 
-    public void openActivity6()
-    {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
+   public void openActivity6() {
+       Intent intent = new Intent(this, LoginActivity.class);
+       startActivity(intent);
+   }
+
     public void openActivity8()
     {
         Intent intent = new Intent(this, client_side_injection.class);
@@ -124,5 +137,10 @@ public class MainMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void logout_menu_open()
+    {
+        Intent intent = new Intent(this, ProtectedAPI.class);
+        startActivity(intent);
+    }
 
 }

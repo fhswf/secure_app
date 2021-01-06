@@ -197,6 +197,8 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="login">Log In</string>
+    <string name="logout">Log Out</string>
 
     <string name="how_to_start">
         Zur Benutzung dieser Applikation wird empfohlen, einen Android-Emulator auf einem Kali-Linux-System zu installieren. Kali Linux bringt Tools mit, welche für das Testen der Sicherheit dieser Applikation geeignet sind.

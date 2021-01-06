@@ -109,6 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hinweise zum Datenschutz"
+                android:id="@+id/button_datenschutz_xml"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="20sp">

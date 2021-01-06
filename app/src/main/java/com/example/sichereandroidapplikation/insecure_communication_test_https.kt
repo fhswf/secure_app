@@ -1,7 +1,10 @@
 package com.example.sichereandroidapplikation
 /**
-Diese Klasse implemementiert die Verbindung zum Backend. Hierfür wird Volley genutzt.
-Mit Hilfe von Volley wird ein GET-Request zum Backend gesendet, welches die Daten im JSON-Format bereitstellt.
+ * Diese Klasse implemementiert die Verbindung zum Backend. Hierfür wird Volley genutzt.
+ * Mit Hilfe von Volley wird ein GET-Request zum Backend gesendet, welches die Daten im JSON-Format bereitstellt
+ * und im TextView ausgibt.
+ *
+ * @author Marcel Hopp
  */
 
 import android.content.IntentFilter
@@ -28,7 +31,6 @@ class insecure_communication_test_https : AppCompatActivity() {
         button_api.setOnClickListener{
             connectToAPI()
         }
-
     }
 
     /**
@@ -38,7 +40,8 @@ class insecure_communication_test_https : AppCompatActivity() {
     {
         val queue = Volley.newRequestQueue(this)
         //URL zur API
-        val url = "https://jupiter.fh-swf.de/secureapp/api/public/uhrzeit"
+        //val url = "https://jupiter.fh-swf.de/secureapp/api/public/uhrzeit"
+        val url = "http://10.0.2.2:3000/api/public/uhrzeit"
 
         //Volley-Request an die API mit Ausgabe in der Activity
         val stringRequest = StringRequest(
@@ -46,14 +49,14 @@ class insecure_communication_test_https : AppCompatActivity() {
                 { response ->
 
                     val obj = JSONObject(response)
-                    val jahr = obj.getInt("jahr").toString()
-                    val monat = obj.getInt("monat").toString()
-                    val tag = obj.getInt("tag").toString()
-                    val stunden = obj.getInt("stunden").toString()
-                    val minuten = obj.getInt("minuten").toString()
-                    val sekunden = obj.getInt("sekunden").toString()
-                    textView_api.text = "Heute ist der $tag-$monat-$jahr. \n Die aktuelle Serveruhrzeit ist $stunden:$minuten:$sekunden."
-
+                    val jahr = obj.getString("jahr")
+                    val monat = obj.getString("monat")
+                    val tag = obj.getString("tag")
+                    val stunden = obj.getString("stunden")
+                    val minuten = obj.getString("minuten")
+                    val sekunden = obj.getString("sekunden")
+                    val wochentag = obj.getString("wochentag")
+                    textView_api.text = "Heute ist $wochentag, der $tag.$monat.$jahr. \n Die aktuelle Serveruhrzeit ist $stunden:$minuten:$sekunden."
                 },
                 { textView_api.text = "Verbindung zum Server konnte nicht hergestellt werden!" })
 

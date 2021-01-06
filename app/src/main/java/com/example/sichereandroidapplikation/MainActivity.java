@@ -12,6 +12,7 @@ package com.example.sichereandroidapplikation;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -23,11 +24,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.auth0.android.Auth0;
-
 public class MainActivity extends AppCompatActivity {
     private Button button;
-    private Auth0 auth0;
 
     NetworkChangeListener networkChangeListener = new NetworkChangeListener();
 
@@ -35,9 +33,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        auth0 = new Auth0(this);
-        auth0.setOIDCConformant(true);
 
         button = (Button) findViewById(R.id.button);
 
@@ -47,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 openMainMenu();
             }
         });
+
     }
 
     /**

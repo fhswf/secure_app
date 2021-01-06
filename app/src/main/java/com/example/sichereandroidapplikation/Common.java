@@ -27,4 +27,6 @@ public class Common {
         return false;
     }
 
+    public static class ToDoListAdapter {
+    }
 }
