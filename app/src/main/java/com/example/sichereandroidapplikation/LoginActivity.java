@@ -95,7 +95,7 @@ public class LoginActivity extends Activity {
         credentialsManager.getCredentials(new BaseCallback<Credentials, CredentialsManagerException>() {
             @Override
             public void onSuccess(final Credentials credentials) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, ProtectedAPI.class);
                 intent.putExtra(EXTRA_ACCESS_TOKEN, credentials.getAccessToken());
                 intent.putExtra(EXTRA_ID_TOKEN, credentials.getIdToken());
                 startActivity(intent);
@@ -111,9 +111,6 @@ public class LoginActivity extends Activity {
     }
 
     private void doLogin() {
-        Auth0 auth0 = new Auth0(this);
-        auth0.setOIDCConformant(true);
-
         WebAuthProvider.login(auth0)
                 .withScheme("demo")
                 .withAudience(API_IDENTIFIER)

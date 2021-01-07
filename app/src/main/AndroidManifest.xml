@@ -23,7 +23,6 @@
         <activity android:name=".Danksagungen" />
         <activity android:name=".client_side_injection" />
         <activity android:name=".SQLcipher_database" />
-        <activity android:name=".code_tampering" />
         <activity android:name=".SharedPrefsTest" />
         <activity android:name=".insecure_authorization" />
         <activity android:name=".insecure_authentication" />

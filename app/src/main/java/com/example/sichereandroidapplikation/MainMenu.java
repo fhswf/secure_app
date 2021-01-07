@@ -84,13 +84,13 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        button_datenschutz = (Button) findViewById(R.id.button_datenschutz_xml);
+/*        button_datenschutz = (Button) findViewById(R.id.button_datenschutz_xml);
         button_datenschutz .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 logout_menu_open();
             }
-        });
+        });*/
     }
 
 
@@ -134,12 +134,6 @@ public class MainMenu extends AppCompatActivity {
     public void open_how_to_start_activity()
     {
         Intent intent = new Intent(this, HowToStart.class);
-        startActivity(intent);
-    }
-
-    public void logout_menu_open()
-    {
-        Intent intent = new Intent(this, ProtectedAPI.class);
         startActivity(intent);
     }
 

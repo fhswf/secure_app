@@ -20,8 +20,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:background="@android:color/white"
         android:padding="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:text="@string/login" />
 
 </LinearLayout>

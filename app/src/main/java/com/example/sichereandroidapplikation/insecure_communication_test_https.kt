@@ -41,7 +41,7 @@ class insecure_communication_test_https : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this)
         //URL zur API
         //val url = "https://jupiter.fh-swf.de/secureapp/api/public/uhrzeit"
-        val url = "http://10.0.2.2:3000/api/public/uhrzeit"
+        val url = "http://10.0.2.2:3000/api/public"
 
         //Volley-Request an die API mit Ausgabe in der Activity
         val stringRequest = StringRequest(
@@ -75,3 +75,4 @@ class insecure_communication_test_https : AppCompatActivity() {
         super.onStop()
     }
 }
+

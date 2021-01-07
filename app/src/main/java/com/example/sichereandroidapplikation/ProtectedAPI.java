@@ -1,16 +1,24 @@
 package com.example.sichereandroidapplikation;
 
-import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.RequestQueue;
+
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONArray;
+
+import java.io.IOException;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -18,11 +26,9 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import java.io.IOException;
-
 public class ProtectedAPI extends AppCompatActivity {
 
-    private static final String API_URL = "http://10.0.2.2:3000/api/public/uhrzeit";
+    private static final String API_URL = "http://10.0.2.2:3000/api/private";
 
     private String accessToken;
 
@@ -31,18 +37,11 @@ public class ProtectedAPI extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_protected_a_p_i);
         Button callAPIWithTokenButton = findViewById(R.id.callAPIWithTokenButton);
-        Button callAPIWithoutTokenButton = findViewById(R.id.callAPIWithoutTokenButton);
         Button loginWithTokenButton = findViewById(R.id.loginButton);
         callAPIWithTokenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 callAPI(true);
-            }
-        });
-        callAPIWithoutTokenButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                callAPI(false);
             }
         });
         loginWithTokenButton.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +99,5 @@ public class ProtectedAPI extends AppCompatActivity {
         intent.putExtra(LoginActivity.EXTRA_CLEAR_CREDENTIALS, true);
         startActivity(intent);
         finish();
-
     }
 }
