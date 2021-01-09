@@ -212,4 +212,10 @@
         Im folgenden können SQL-Injections getestet werden. Anmerkung: Die Datenbank ist nicht verschlüsselt!
     </string>
 
+    <string name="login_text_auth0">
+        Mit einem Klick auf den unteren Button öffnet sich eine Anmeldemaske von Auth0 im Browser.
+        \n \n
+        Hierüber ist der Zugriff auf einen privaten API-Endpunkt der Applikation möglich.
+    </string>
+
 </resources>

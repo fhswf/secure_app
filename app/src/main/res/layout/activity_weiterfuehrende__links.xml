@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Weiterfuehrende_Links"
-    android:background="#242424">
+    tools:context=".Weiterfuehrende_Links">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,7 +19,6 @@
             android:text="Danksagungen und Links"
             android:textSize="30dp"
             android:gravity="center"
-            android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp">
         </TextView>
@@ -37,7 +35,6 @@
                 android:text="@string/danksagungen"
                 android:textSize="20dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp">
             </TextView>
@@ -49,7 +46,6 @@
                 android:text="@string/link_fh_homepage"
                 android:textSize="20dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp">
             </TextView>
@@ -61,7 +57,6 @@
                 android:text="@string/link_gawron"
                 android:textSize="20dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp">
             </TextView>
@@ -73,7 +68,6 @@
                 android:text="@string/link_kubek"
                 android:textSize="20dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp">
             </TextView>
@@ -85,7 +79,6 @@
                 android:text="@string/link_owasp"
                 android:textSize="20dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp">
             </TextView>
@@ -97,7 +90,6 @@
                 android:text="@string/link_android_security"
                 android:textSize="20dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp">
             </TextView>
@@ -109,7 +101,6 @@
                 android:text="@string/link_auth0"
                 android:textSize="20dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp">
             </TextView>

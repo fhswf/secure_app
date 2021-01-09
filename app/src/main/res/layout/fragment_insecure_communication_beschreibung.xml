@@ -10,7 +10,6 @@
         android:layout_height="match_parent"
         android:text="@string/beschrebung_insecure_communiation"
         android:gravity="center"
-        android:textColor="@color/white"
         android:textSize="20dp"
         />
 

@@ -4,20 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Danksagungen"
-    android:background="#242424">
+    tools:context=".Danksagungen">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_danksagungen"
         android:layout_width="417dp"
         android:layout_height="375dp"
         android:layout_marginTop="159dp"
         android:layout_marginBottom="88dp"
         android:gravity="center"
         android:text="@string/danksagungen"
-        android:textColor="#FFFFFF"
         android:textSize="19sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

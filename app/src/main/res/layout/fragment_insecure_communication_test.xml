@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".insecure_communication_test"
-    android:background="#242424"
     android:gravity="center">
 
 
@@ -14,19 +13,19 @@
         android:text="@string/insecure_communication_test_string"
         android:id="@+id/view"
         android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="20dp"
         />
 
     <Button
         android:id="@+id/button_insecure_communication_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="20dp"
         android:text="Weiter zur Test-Activity"
+        android:padding="20dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_below="@id/view">
-    </Button>
+        android:textSize="20sp"></Button>
 
 </RelativeLayout>

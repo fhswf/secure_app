@@ -21,6 +21,8 @@ public class insecure_communication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insecure_communication);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         tabLayout = (TabLayout)findViewById(R.id.insecure_communication);
         tabItem1 = (TabItem)findViewById(R.id.tab1);
         tabItem2 = (TabItem)findViewById(R.id.tab2);

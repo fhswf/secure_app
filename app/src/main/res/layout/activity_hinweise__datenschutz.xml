@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HowToStart">
+    tools:context=".Hinweise_Datenschutz">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/how_to_start"
+        android:text="@string/danksagungen"
         android:textSize="20dp"
         android:gravity="center"
         android:textColor="@color/white"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp">
     </TextView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

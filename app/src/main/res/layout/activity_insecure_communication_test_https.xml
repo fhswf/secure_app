@@ -5,43 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".insecure_communication_test_https"
-    android:background="#242424">
+    >
 
         <TextView
-            android:id="@+id/ueberschrift"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Antwort vom Backend:"
-            android:layout_centerInParent="true"
+            android:text="Verschlüsselte Backend-Kommunikation"
+            android:id="@+id/ueberschrift"
+            android:textSize="30dp"
             android:gravity="center"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:textColor="@android:color/white"
-            android:textSize="33sp"
-            android:textStyle="bold"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
         <TextView
             android:id="@+id/textView_api"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="Um die Daten vom Server anzufragen, einfach auf den Button klicken."
-            android:textColor="@android:color/white"
             android:layout_below="@id/ueberschrift"
-            android:paddingBottom="30dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
             android:paddingTop="30dp"
-            android:textSize="20sp"/>
+            android:layout_marginTop="75dp"
+            android:paddingBottom="30dp"
+            android:text="Um die Daten vom Server anzufragen, einfach auf den Button klicken."
+            android:textSize="20sp" />
 
         <Button
+            android:id="@+id/button_api"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Anfrage an das Backend senden"
-            android:id="@+id/button_api"
-            android:textColor="@color/black"
-            android:textAlignment="center"
             android:layout_below="@id/textView_api"
-            android:textSize="20sp">
-        </Button>
+            android:layout_marginTop="50dp"
+            android:text="Anfrage an das Backend senden"
+            android:textAlignment="center"
+            android:padding="20dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_api1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_api"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Anmerkung: Es handelt sich hierbei um die Serveruhrzeit in UTC. Das heißt, diese liegt eine Stunde hinter der Mitteleuropäischen Zeit!"
+            android:textSize="15sp" />
 
 </RelativeLayout>

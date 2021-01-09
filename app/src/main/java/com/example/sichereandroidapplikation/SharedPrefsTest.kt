@@ -22,6 +22,7 @@ class SharedPrefsTest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_prefs_test)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         encryptSharedPrefs()
 

@@ -20,6 +20,8 @@ public class client_side_injection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_side_injection);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         tabLayout = (TabLayout)findViewById(R.id.client_side_injection);
         tabItem1 = (TabItem)findViewById(R.id.tab1);
         tabItem2 = (TabItem)findViewById(R.id.tab2);

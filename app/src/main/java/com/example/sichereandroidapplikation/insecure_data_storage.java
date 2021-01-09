@@ -21,6 +21,8 @@ public class insecure_data_storage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insecure_data_storage);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         tabLayout = (TabLayout)findViewById(R.id.insecure_data_storage);
         tabItem1 = (TabItem)findViewById(R.id.tab1);
         tabItem2 = (TabItem)findViewById(R.id.tab2);

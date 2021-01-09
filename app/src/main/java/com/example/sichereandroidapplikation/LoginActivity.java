@@ -1,6 +1,5 @@
 package com.example.sichereandroidapplikation;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.auth0.android.Auth0;
 import com.auth0.android.Auth0Exception;
@@ -27,7 +27,7 @@ import com.auth0.android.result.Credentials;
  * Created by lbalmaceda on 5/10/17.
  */
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatActivity {
 
     private Auth0 auth0;
     private SecureCredentialsManager credentialsManager;
@@ -49,7 +49,7 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         //Setup the UI
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.login_activity);
         Button loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +57,8 @@ public class LoginActivity extends Activity {
                 doLogin();
             }
         });
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Setup CredentialsManager
         auth0 = new Auth0(this);

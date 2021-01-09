@@ -2,6 +2,7 @@ package com.example.sichereandroidapplikation;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -9,16 +10,22 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.RequestQueue;
-
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -28,14 +35,18 @@ import okhttp3.Response;
 
 public class ProtectedAPI extends AppCompatActivity {
 
-    private static final String API_URL = "http://10.0.2.2:3000/api/private";
+    private static final String API_URL = "https://jupiter.fh-swf.de/secureapp/api/private";
 
     private String accessToken;
+    private TextView textView_api_text;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_protected_a_p_i);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Button callAPIWithTokenButton = findViewById(R.id.callAPIWithTokenButton);
         Button loginWithTokenButton = findViewById(R.id.loginButton);
         callAPIWithTokenButton.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +61,7 @@ public class ProtectedAPI extends AppCompatActivity {
                 logout();
             }
         });
+
         accessToken = getIntent().getStringExtra(LoginActivity.EXTRA_ACCESS_TOKEN);
     }
 
@@ -74,9 +86,10 @@ public class ProtectedAPI extends AppCompatActivity {
                     @Override
                     public void run() {
                         if (response.isSuccessful()) {
-                            Toast.makeText(ProtectedAPI.this, "API call success!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProtectedAPI.this, "API-Call erfolgreich!", Toast.LENGTH_SHORT).show();
+                            print_private_api_message();
                         } else {
-                            Toast.makeText(ProtectedAPI.this, "API call failed.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProtectedAPI.this, "API-Call fehlgeschlagen!.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -92,6 +105,37 @@ public class ProtectedAPI extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    private void print_private_api_message() {
+        RequestQueue queue = Volley.newRequestQueue(ProtectedAPI.this);
+
+        JsonObjectRequest request = new JsonObjectRequest(com.android.volley.Request.Method.GET, API_URL, null, new com.android.volley.Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                textView_api_text = findViewById(R.id.textView_api_protected_xml);
+
+                try {
+                    textView_api_text.setText(response.getString("message"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }, new com.android.volley.Response.ErrorListener() {
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }){
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headerMap = new HashMap<String, String>();
+                headerMap.put("Content-Type", "application/json");
+                headerMap.put("Authorization", "Bearer " + accessToken);
+                return headerMap;
+            }
+        };
+        queue.add(request);
     }
 
     private void logout() {

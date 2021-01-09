@@ -10,26 +10,48 @@
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.Bridge"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".ProtectedAPI" />
-        <activity android:name=".SQLi_Injection" />
-        <activity android:name=".HowToStart" />
+        android:theme="@style/Theme.MaterialComponents.Bridge">
+        <activity android:name=".Hinweise_Datenschutz"
+            android:parentActivityName=".MainMenu">
+        </activity>
+        <activity android:name=".LoginActivity"
+            android:parentActivityName=".MainMenu"
+            />/>
+        <activity android:name=".ProtectedAPI"
+            android:parentActivityName=".MainMenu"
+            />/>
+        <activity android:name=".SQLi_Injection"
+            android:parentActivityName=".MainMenu"
+            />/>
+        <activity android:name=".HowToStart"
+            android:parentActivityName=".MainMenu"
+            />/>
         <activity android:name=".insecure_communication_test_https" />
-        <activity android:name=".Weiterfuehrende_Links" />
-        <activity android:name=".Danksagungen" />
-        <activity android:name=".client_side_injection" />
-        <activity android:name=".SQLcipher_database" />
-        <activity android:name=".SharedPrefsTest" />
+        <activity android:name=".Weiterfuehrende_Links"
+            android:parentActivityName=".MainMenu"
+            />/>
+        <activity android:name=".Danksagungen"
+            android:parentActivityName=".MainMenu"
+            />/>
+        <activity android:name=".client_side_injection"
+            android:parentActivityName=".MainMenu"/>
+        <activity android:name=".SQLcipher_database"
+            android:parentActivityName=".insecure_data_storage"/>
+        <activity android:name=".SharedPrefsTest"
+            android:parentActivityName=".insecure_data_storage"/>
         <activity android:name=".insecure_authorization" />
         <activity android:name=".insecure_authentication" />
-        <activity android:name=".insecure_communication" />
-        <activity android:name=".insecure_data_storage" />
+        <activity android:name=".insecure_communication"
+            android:parentActivityName=".MainMenu"/>
+        <activity android:name=".insecure_data_storage"
+            android:parentActivityName=".MainMenu"
+            />
         <activity android:name=".improper_platform_usage" />
-        <activity android:name=".MainMenu" />
+        <activity android:name=".MainMenu"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

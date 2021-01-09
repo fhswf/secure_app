@@ -5,13 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".insecure_communcation_vermeidung">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/vermeidung_insecure_communication"
         android:textSize="20dp"
-        android:gravity="center"
-        android:textColor="@color/white"/>
+        android:gravity="center"/>
 
 </FrameLayout>

@@ -10,5 +10,8 @@ public class Danksagungen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_danksagungen);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 }

@@ -21,6 +21,7 @@ public class SQLcipher_database extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s_q_lcipher_database);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         editText1 = (EditText) findViewById(R.id.passwort_sqlcipher);
         editText2 = (EditText) findViewById(R.id.passwort_sqlcipher_confirmation);

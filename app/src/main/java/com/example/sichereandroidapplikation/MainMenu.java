@@ -23,6 +23,7 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         button_insecure_data_storage = (Button) findViewById(R.id.insecure_data_storage);
         button_insecure_data_storage.setOnClickListener(new View.OnClickListener() {
@@ -50,16 +51,6 @@ public class MainMenu extends AppCompatActivity {
         });
 
 
-/*
-        button_insecure_authorization = (Button) findViewById(R.id.insecure_authorization);
-        button_insecure_authorization.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivity6();
-            }
-        });
-*/
-
         button_client_side_injection = (Button) findViewById(R.id.client_side_injection_button_xml);
         button_client_side_injection.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,13 +75,13 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-/*        button_datenschutz = (Button) findViewById(R.id.button_datenschutz_xml);
+        button_datenschutz = (Button) findViewById(R.id.button_datenschutz_xml);
         button_datenschutz .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                logout_menu_open();
+                open_datenschutz_activity();
             }
-        });*/
+        });
     }
 
 
@@ -112,14 +103,6 @@ public class MainMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
-/*
-    public void openActivity5()
-    {
-        Intent intent = new Intent(this, API_Test.class);
-        startActivity(intent);
-    }
-*/
-
    public void openActivity6() {
        Intent intent = new Intent(this, LoginActivity.class);
        startActivity(intent);
@@ -134,6 +117,12 @@ public class MainMenu extends AppCompatActivity {
     public void open_how_to_start_activity()
     {
         Intent intent = new Intent(this, HowToStart.class);
+        startActivity(intent);
+    }
+
+    public void open_datenschutz_activity()
+    {
+        Intent intent = new Intent(this, Hinweise_Datenschutz.class);
         startActivity(intent);
     }
 
