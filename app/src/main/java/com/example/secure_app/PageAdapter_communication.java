@@ -5,11 +5,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-public class PageAdapter_authentication extends FragmentPagerAdapter
+public class PageAdapter_communication extends FragmentPagerAdapter
 {
     int tabcount;
 
-    public PageAdapter_authentication(@NonNull FragmentManager fm, int behavior) {
+    public PageAdapter_communication(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
         tabcount = behavior;
     }
@@ -19,9 +19,9 @@ public class PageAdapter_authentication extends FragmentPagerAdapter
     public Fragment getItem(int position) {
         switch(position)
         {
-            case 0 : return new insecure_authentication_beschreibung();
-            case 1 : return new insecure_authentication_vermeidung();
-            case 2 : return new ftab3();
+            case 0 : return new insecure_communication_beschreibung();
+            case 1 : return new insecure_communcation_vermeidung();
+            case 2 : return new insecure_communication_test();
             default: return null;
         }
     }

@@ -1,5 +1,6 @@
 package com.example.sichereandroidapplikation;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,13 +8,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ftab1#newInstance} factory method to
+ * Use the {@link client_side_injection_test#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ftab1 extends Fragment {
+public class client_side_injection_test extends Fragment {
+    private Button button_sqli, button_xss;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +27,7 @@ public class ftab1 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ftab1() {
+    public client_side_injection_test() {
         // Required empty public constructor
     }
 
@@ -34,11 +37,11 @@ public class ftab1 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment fab1.
+     * @return A new instance of fragment client_side_injection_test.
      */
     // TODO: Rename and change types and number of parameters
-    public static ftab1 newInstance(String param1, String param2) {
-        ftab1 fragment = new ftab1();
+    public static client_side_injection_test newInstance(String param1, String param2) {
+        client_side_injection_test fragment = new client_side_injection_test();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +62,25 @@ public class ftab1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fab1, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_client_side_injection_test, container,false);
+
+     /*   button_sqli = (Button)view.findViewById(R.id.sqlite_injection_xml);
+        button_sqli.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), SQLcipher_database_injection.class);
+                startActivity(in);
+            }
+        });*/
+
+        button_xss = (Button)view.findViewById(R.id.button_xss_xml);
+        button_xss.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), SQLcipher_database.class);
+                startActivity(in);
+            }
+        });
+
+        return view;
     }
 }

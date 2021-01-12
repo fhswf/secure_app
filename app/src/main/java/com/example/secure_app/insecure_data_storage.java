@@ -9,26 +9,29 @@ import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 
-public class improper_platform_usage extends AppCompatActivity {
+public class insecure_data_storage extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
     TabItem tabItem1, tabItem2, tabItem3;
-    PageAdapter pageAdapter;
+    PageAdapter_data_storage PageAdapter_data_storage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_improper_platform_usage);
+        setContentView(R.layout.activity_insecure_data_storage);
 
-        tabLayout = (TabLayout)findViewById(R.id.improper_platform_usage);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
+
+        tabLayout = (TabLayout)findViewById(R.id.insecure_data_storage);
         tabItem1 = (TabItem)findViewById(R.id.tab1);
         tabItem2 = (TabItem)findViewById(R.id.tab2);
         tabItem3 = (TabItem)findViewById(R.id.tab3);
         viewPager = (ViewPager)findViewById(R.id.viewpager);
 
-        pageAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(pageAdapter);
+        PageAdapter_data_storage = new PageAdapter_data_storage(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(PageAdapter_data_storage);
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -36,7 +39,7 @@ public class improper_platform_usage extends AppCompatActivity {
                 viewPager.setCurrentItem(tab.getPosition());
 
                 if(tab.getPosition() == 0 || tab.getPosition() == 1 || tab.getPosition() == 2)
-                    pageAdapter.notifyDataSetChanged();
+                    PageAdapter_data_storage.notifyDataSetChanged();
             }
 
             @Override

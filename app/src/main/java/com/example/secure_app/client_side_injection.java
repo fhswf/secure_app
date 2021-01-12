@@ -8,27 +8,29 @@ import android.os.Bundle;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
-
-public class insecure_authentication extends AppCompatActivity {
+public class client_side_injection extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
     TabItem tabItem1, tabItem2, tabItem3;
-    PageAdapter_authentication PageAdapter_authentication;
+    PageAdapter_client_side_injection PageAdapter_client_side_injection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_insecure_authentication);
+        setContentView(R.layout.activity_client_side_injection);
 
-        tabLayout = (TabLayout)findViewById(R.id.insecure_authentication);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
+
+        tabLayout = (TabLayout)findViewById(R.id.client_side_injection);
         tabItem1 = (TabItem)findViewById(R.id.tab1);
         tabItem2 = (TabItem)findViewById(R.id.tab2);
         tabItem3 = (TabItem)findViewById(R.id.tab3);
         viewPager = (ViewPager)findViewById(R.id.viewpager);
 
-        PageAdapter_authentication = new PageAdapter_authentication(getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(PageAdapter_authentication);
+        PageAdapter_client_side_injection = new PageAdapter_client_side_injection(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(PageAdapter_client_side_injection);
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -36,7 +38,7 @@ public class insecure_authentication extends AppCompatActivity {
                 viewPager.setCurrentItem(tab.getPosition());
 
                 if(tab.getPosition() == 0 || tab.getPosition() == 1 || tab.getPosition() == 2)
-                    PageAdapter_authentication.notifyDataSetChanged();
+                    PageAdapter_client_side_injection.notifyDataSetChanged();
             }
 
             @Override
