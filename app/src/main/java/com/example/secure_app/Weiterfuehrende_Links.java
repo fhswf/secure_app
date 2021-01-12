@@ -1,4 +1,4 @@
-package com.example.sichereandroidapplikation;
+package com.example.secure_app;
 
 /**
  * Diese Klasse sorgt dafür, dass die einzelnen Links geöffnet werden.
@@ -6,8 +6,6 @@ package com.example.sichereandroidapplikation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.widget.TextView;

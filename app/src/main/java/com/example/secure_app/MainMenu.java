@@ -1,4 +1,4 @@
-package com.example.sichereandroidapplikation;
+package com.example.secure_app;
 
 /**
  * Diese Klasse impelementiert das Hauptmenü der Applikation.

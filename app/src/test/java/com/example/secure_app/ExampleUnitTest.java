@@ -1,4 +1,4 @@
-package com.example.sichereandroidapplikation;
+package com.example.secure_app;
 
 import org.junit.Test;
 

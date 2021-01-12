@@ -1,4 +1,4 @@
-package com.example.sichereandroidapplikation
+package com.example.secure_app
 /**
  * Diese Klasse implemementiert die Verbindung zum Backend. Hierfür wird Volley genutzt.
  * Mit Hilfe von Volley wird ein GET-Request zum Backend gesendet, welches die Daten im JSON-Format bereitstellt

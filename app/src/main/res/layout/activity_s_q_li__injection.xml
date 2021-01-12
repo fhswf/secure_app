@@ -4,15 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SQLi_Injection"
-    android:background="#242424">
+    tools:context=".SQLi_Injection">
 
     <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sqlinjection_text"
+            android:textSize="20dp"
+            android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/panel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sqlinjection_text"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:gravity="center"/>
+        android:orientation="vertical"
+        android:layout_marginTop="200dp">
+
+                <TextView
+                    android:id="@+id/email_edit"
+                    android:hint="Email"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+<!--        <EditText-->
+<!--            android:id="@+id/email_edit"-->
+<!--            android:hint="Email"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/button_email_suche_sqli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suchen" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.sichereandroidapplikation;
+package com.example.secure_app;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -65,13 +65,13 @@ public class client_side_injection_test extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_client_side_injection_test, container,false);
 
-     /*   button_sqli = (Button)view.findViewById(R.id.sqlite_injection_xml);
+        button_sqli = (Button)view.findViewById(R.id.sqlite_injection_xml);
         button_sqli.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent in = new Intent(getActivity(), SQLcipher_database_injection.class);
+                Intent in = new Intent(getActivity(), SQLi_Injection.class);
                 startActivity(in);
             }
-        });*/
+        });
 
         button_xss = (Button)view.findViewById(R.id.button_xss_xml);
         button_xss.setOnClickListener(new View.OnClickListener() {

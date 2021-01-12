@@ -1,4 +1,4 @@
-package com.example.sichereandroidapplikation;
+package com.example.secure_app;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
      */
     @SuppressWarnings("unused")
     private static final int CODE_DEVICE_AUTHENTICATION = 22;
-    private static final String API_IDENTIFIER = "http://127.0.0.1:3000/api/private";
+    private static final String API_IDENTIFIER = "https://jupiter.fh-swf.de/secureapp/api/private";
 
     public static final String EXTRA_CLEAR_CREDENTIALS = "com.auth0.CLEAR_CREDENTIALS";
     public static final String EXTRA_ACCESS_TOKEN = "com.auth0.ACCESS_TOKEN";

@@ -1,8 +1,7 @@
-package com.example.sichereandroidapplikation;
+package com.example.secure_app;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,13 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.AuthFailureError;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -36,6 +32,7 @@ import okhttp3.Response;
 public class ProtectedAPI extends AppCompatActivity {
 
     private static final String API_URL = "https://jupiter.fh-swf.de/secureapp/api/private";
+    //private static final String API_URL = "http://10.0.2.2:3000/api/private";
 
     private String accessToken;
     private TextView textView_api_text;
@@ -90,7 +87,7 @@ public class ProtectedAPI extends AppCompatActivity {
                             Toast.makeText(ProtectedAPI.this, "API-Call erfolgreich!", Toast.LENGTH_SHORT).show();
                             print_private_api_message();
                         } else {
-                            Toast.makeText(ProtectedAPI.this, "API-Call fehlgeschlagen!.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProtectedAPI.this, "API-Call fehlgeschlagen!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

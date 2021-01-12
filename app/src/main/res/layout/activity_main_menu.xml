@@ -31,7 +31,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Datenspeicherung"
+                android:text="Lokale Datenspeicherung"
                 android:id="@+id/insecure_data_storage"
                 android:textAlignment="center"
                 android:padding="15dp"
@@ -111,7 +111,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="made with ♥ by Marcel Hopp in 2020"
+                android:text="made with ♥ by Marcel Hopp in 2020-21"
                 android:textSize="20dp"
                 android:gravity="center"
                 android:layout_marginTop="10dp"

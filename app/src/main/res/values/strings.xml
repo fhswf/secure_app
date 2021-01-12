@@ -133,18 +133,15 @@
     </string>
 
     <string name="login_dialog">
-        Nachfolgend öffnet sich eine Anmeldemaske des Auth0.com-Dienstes. Dieser verwaltet die Benutzer für diese Applikation.
+        Hier kann die Authentifizierung mit Hilfe von JSON Web Tokens getestet werden. Das Backend stellt einen privaten API-Endpunkt bereit, welcher ein kurzes Hello World zurückgibt.
         \n\n
-        Möchten Sie sich nicht registrieren, ist dies kein Problem - jedoch kann folglich diese Funktion nicht getestet werden.
-        \n\n
-        Nach erfolgreicher Registrierung/Anmeldung kann auf einen abgesicherten API-Endpunkt zugegriffen werden.
-        Das ganze erfolgt über JSON-Web-Tokens.
+        Hierzu ist eine freiwillige Registrierung über den Auth0-Provider erforderlich. Nachdem diese erfolgreich abgeschlossen wurde, kann auf den privaten API-Endpunkt zugegriffen werden.
     </string>
 
     <string name="danksagungen">
-        Besonderer Dank geht an Dr. Mario Kubek, welcher mir dieses Thema vorgeschlagen und hilfreiche Tipps im Bereich Mobile Security gegeben hat.
+        Besonderer Dank geht an Dr. Mario Kubek, welcher mir dieses Thema vorgeschlagen und hilfreiche Ratschläge im Bereich Mobile Security gegeben hat.
         \n \n
-        Weiterhin bedanke ich mich bei Prof. Dr. Christian Gawron für die Hilfestellungen im Bereich des Hostings und zur Veröffentlichung dieser Applikation.
+        Weiterhin bedanke ich mich bei Prof. Dr. Christian Gawron für die Hilfestellungen im Bereich des Hostings und Veröffentlichung dieser Applikation.
     </string>
 
     <string name="link_fh_homepage">
@@ -179,9 +176,9 @@
 
     <string name="insecure_communication_test_string">
         Hier kann die verschlüsselte Kommunikation zum Backend getestet werden.
-        \n
-        Das Backend stellt das aktuelle Datum sowie die Uhrzeit zur Verfügung. Beide Daten werden in der nächsten Activity ausgegeben.
-        \n
+        \n \n
+        Das Backend stellt einen öffentlichen API-Endpunkt bereit, der die aktuelle Serveruhrzeit zurückgibt.
+        \n \n
         Zum Testen der Verschlüsselung kann auf die Burp Suite zurückgegriffen werden. Hier wird ausschließlich eine verschlüsselte Kommunikation zu sehen sein.
     </string>
 
@@ -209,13 +206,14 @@
     </string>
 
     <string name="sqlinjection_text">
-        Im folgenden können SQL-Injections getestet werden. Anmerkung: Die Datenbank ist nicht verschlüsselt!
+        Im folgenden können SQL-Injections getestet werden. Anmerkung: Die Datenbank wurde mit dem Passwort password verschlüsselt, falls die Datenbank über den SQLBrowser eingesehen werden soll.
     </string>
 
-    <string name="login_text_auth0">
-        Mit einem Klick auf den unteren Button öffnet sich eine Anmeldemaske von Auth0 im Browser.
+    <string name="datenschutz_text">
+        Diese Applikation erhebt und verarbeitet keine personenbezogene Daten. In den Logdateien des Servers wird Ihre IP-Adresse nur in anonymisierter Form (ohne das letzte Byte) gespeichert.
         \n \n
-        Hierüber ist der Zugriff auf einen privaten API-Endpunkt der Applikation möglich.
+        Bei Benutzung des Auth0-Dienstes, werden Ihre IP- sowie E-Mail-Adresse gespeichert.
+        \n \n
+        Haben Sie sich einen Account über Auth0 erstellt, welcher gelöscht werden soll, kontaktieren Sie mich per E-Mail. Im Anschluss werde ich eine Löschung vornehmen.
     </string>
-
 </resources>

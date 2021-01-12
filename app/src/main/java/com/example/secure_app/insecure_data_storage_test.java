@@ -1,4 +1,4 @@
-package com.example.sichereandroidapplikation;
+package com.example.secure_app;
 
 import android.content.Intent;
 import android.os.Bundle;

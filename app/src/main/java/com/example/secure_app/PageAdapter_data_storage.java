@@ -1,4 +1,4 @@
-package com.example.sichereandroidapplikation;
+package com.example.secure_app;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

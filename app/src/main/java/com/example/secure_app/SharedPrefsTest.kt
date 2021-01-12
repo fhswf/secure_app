@@ -1,12 +1,17 @@
-package com.example.sichereandroidapplikation
+package com.example.secure_app
 
 /**
  * Diese Klasse implementiert die Speicherung eines Teststrings
  * mit Hilfe der Library EncryptedSharedPreferences.
+ *
+ * @author Marcel Hopp
  */
 
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.security.crypto.EncryptedSharedPreferences
@@ -18,7 +23,6 @@ class SharedPrefsTest : AppCompatActivity() {
     private val encrypted_shared_prefs = "encrypted_shared_prefs"
     lateinit var sharedPreferences: SharedPreferences
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_prefs_test)
@@ -26,7 +30,7 @@ class SharedPrefsTest : AppCompatActivity() {
         supportActionBar!!.title = "EncryptedSharedPreferences"
 
         encryptSharedPrefs()
-
+        deleteData()
         loadData()
 
         speicherbutton_shared_prefs.setOnClickListener{
@@ -40,10 +44,10 @@ class SharedPrefsTest : AppCompatActivity() {
      */
     private fun encryptSharedPrefs()
     {
-        //Erstellt einen neuen Masterkey zur Ver-/und Entschlüsselung
+        /** Erstellt einen neuen Masterkey zur Ver-/und Entschlüsselung */
         val masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
 
-        //Initalisiert eine neue Instanz von EncryptedSharedPreferences
+        /** Initalisiert eine neue Instanz von EncryptedSharedPreferences */
         sharedPreferences = EncryptedSharedPreferences.create(
                 encrypted_shared_prefs,
                 masterKeyAlias,
@@ -51,7 +55,6 @@ class SharedPrefsTest : AppCompatActivity() {
                 EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
                 EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
         )
-
     }
 
     /**
@@ -62,7 +65,7 @@ class SharedPrefsTest : AppCompatActivity() {
         val insertedText = eingabe_string_shared_prefs.text.toString()
         ausgabe_shared_prefs.text = insertedText
 
-        if(insertedText.equals(""))
+        if(insertedText == "")
         {
             Toast.makeText(this, "Kein String übergeben!", Toast.LENGTH_SHORT).show();
         }
@@ -83,5 +86,13 @@ class SharedPrefsTest : AppCompatActivity() {
     {
         val savedString = sharedPreferences.getString("String_Key", null)
         ausgabe_shared_prefs.text = savedString
+    }
+
+    /**
+     * Löscht den String, der vorher übergeben wurde aus den SharedPreferences.
+     */
+    private fun deleteData()
+    {
+        sharedPreferences.edit().remove("String_Key").commit()
     }
 }

@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/view"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
         android:text="Weiter zur Test-Activity"
         android:padding="20dp"

@@ -1,4 +1,4 @@
-package com.example.sichereandroidapplikation.ui.main;
+package com.example.secure_app.ui.main;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
