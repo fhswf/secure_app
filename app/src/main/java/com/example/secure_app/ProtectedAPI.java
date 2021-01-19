@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,21 +37,28 @@ public class ProtectedAPI extends AppCompatActivity {
 
     private String accessToken;
     private TextView textView_api_text;
+    ProgressBar progressBar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_protected_a_p_i);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("JWT-Authentifizierung: Eingeloggt");
 
         Button callAPIWithTokenButton = findViewById(R.id.callAPIWithTokenButton);
         Button loginWithTokenButton = findViewById(R.id.loginButton);
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar_protected_api);
+
         callAPIWithTokenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBar.setVisibility(View.VISIBLE);
                 callAPI(true);
+
             }
         });
         loginWithTokenButton.setOnClickListener(new View.OnClickListener() {
@@ -86,8 +94,10 @@ public class ProtectedAPI extends AppCompatActivity {
                         if (response.isSuccessful()) {
                             Toast.makeText(ProtectedAPI.this, "API-Call erfolgreich!", Toast.LENGTH_SHORT).show();
                             print_private_api_message();
+                            progressBar.setVisibility(View.GONE);
                         } else {
                             Toast.makeText(ProtectedAPI.this, "API-Call fehlgeschlagen!", Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
                         }
                     }
                 });

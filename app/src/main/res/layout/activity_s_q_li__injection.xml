@@ -7,49 +7,36 @@
     tools:context=".SQLi_Injection">
 
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/sqlinjection_text"
-            android:textSize="20dp"
-            android:gravity="center"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivi1textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/material_grey_600"
+        android:gravity="fill_horizontal|fill_vertical"
+        android:textAlignment="gravity" />
 
-    <LinearLayout
-        android:id="@+id/panel"
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="200dp">
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/ivi1search"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/email_edit"
-                    android:hint="Email"
-                    android:textSize="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-
-<!--        <EditText-->
-<!--            android:id="@+id/email_edit"-->
-<!--            android:hint="Email"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"/>-->
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
-
-            <Button
-                android:id="@+id/button_email_suche_sqli"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Suchen" />
-
-
-        </LinearLayout>
-
-    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivi1button"
+        android:layout_below="@+id/ivi1search"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_centerHorizontal="true"
+        android:onClick="search"/>
 
 
 </RelativeLayout>

@@ -10,6 +10,7 @@ package com.example.secure_app
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
@@ -30,6 +31,7 @@ class insecure_communication_test_https : AppCompatActivity() {
 
         /** API aufrufen, sobald Button gedrückt*/
         button_api.setOnClickListener{
+            progressBar.visibility = View.VISIBLE
             connectToAPI()
         }
     }
@@ -47,6 +49,7 @@ class insecure_communication_test_https : AppCompatActivity() {
         val stringRequest = StringRequest(
                 Request.Method.GET, url,
                 { response ->
+                    progressBar.visibility = View.INVISIBLE
 
                     val obj = JSONObject(response)
                     val jahr = obj.getString("jahr")
@@ -58,7 +61,9 @@ class insecure_communication_test_https : AppCompatActivity() {
                     val wochentag = obj.getString("wochentag")
                     textView_api.text = "Sichere Verbindung zum Backend hergestellt. \n\n Heute ist $wochentag, der $tag.$monat.$jahr. \n Die aktuelle Serveruhrzeit ist $stunden:$minuten:$sekunden."
                 },
-                { textView_api.text = "Verbindung zum Server konnte nicht hergestellt werden!" })
+                {
+                    progressBar.visibility = View.INVISIBLE
+                    textView_api.text = "Verbindung zum Server konnte nicht hergestellt werden!" })
 
         // Add the request to the RequestQueue.
         queue.add(stringRequest)

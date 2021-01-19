@@ -3,7 +3,6 @@
     package="com.example.secure_app">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,10 +10,17 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Bridge">
-        <activity android:name=".Open_SQLcipher_database"></activity>
+        <activity
+            android:name=".Splash_Activity"
+            android:parentActivityName=".insecure_data_storage" />
+        <activity
+            android:name=".Enter_SQLcipher_Database_Password"
+            android:parentActivityName=".insecure_data_storage"/>
+        <activity
+            android:name=".Open_SQLcipher_database"
+            android:parentActivityName=".insecure_data_storage"/>
         <activity
             android:name=".Hinweise_Datenschutz"
             android:parentActivityName=".MainMenu" />
@@ -43,7 +49,7 @@
             android:name=".client_side_injection"
             android:parentActivityName=".MainMenu" />
         <activity
-            android:name=".SQLcipher_database"
+            android:name=".Create_SQLcipher_Database_Password"
             android:parentActivityName=".insecure_data_storage" />
         <activity
             android:name=".SharedPrefsTest"

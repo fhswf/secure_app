@@ -76,7 +76,7 @@ public class client_side_injection_test extends Fragment {
         button_xss = (Button)view.findViewById(R.id.button_xss_xml);
         button_xss.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent in = new Intent(getActivity(), SQLcipher_database.class);
+                Intent in = new Intent(getActivity(), Create_SQLcipher_Database_Password.class);
                 startActivity(in);
             }
         });

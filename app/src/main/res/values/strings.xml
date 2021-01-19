@@ -103,16 +103,18 @@
     <string name="shared_prefs_text">
         Um die Sicherheit der SharedPreferences zu testen, bitte im ersten Fenster einen beliebigen String eingeben. Anschließend wird dieser zur Kontrolle im unteren Fenster ausgegeben.
         \n \n
-        Die SharedPreferences lassen sich nun im Ordner /data/data/shared_prefs/encrypted_shared_prefs.xml finden. Der übergebene String wurde mit dem AES256-Algorithmus verschlüsselt.
+        Die SharedPreferences lassen sich nun im Ordner /data/shared_prefs/encrypted_shared_prefs.xml finden. Der übergebene String wurde mit dem AES256-Algorithmus verschlüsselt.
     </string>
 
     <string name="sqlite_test">
-        Im folgenden wird eine verschlüsselte SQLite-Datenbank erstellt. Dazu wird SQL-Cipher genutzt.
+        Hier wird eine, mit dem AES256-Algorithmus, verschlüsselte SQLite-Datenbank, lokal auf dem Endgerät/Emulator erstellt. Dazu wird SQL-Cipher genutzt. Diese Datenbank speichert ausschließlich E-Mail-Adressen.
         \n \n
-        Die Datenbank muss mit einem Passwort versehen werden. Nachdem das Passwort erfolgreich übergeben wurde, wird eine verschlüsselte SQLite-Datenbank erzeugt.
-        Diese ist im Ordner \data\database zu finden und lässt sich mit Hilfe des DBBrowser-Tools öffnen. Zum Öffnen wird das Passwort benötigt, welches vorher übergeben wurde.
+        Die Datenbank muss mit einem Passwort versehen werden. Nachdem das Passwort erfolgreich übergeben wurde, wird eine verschlüsselte SQLite-Datenbank erzeugt. Anschließend können einzelne Datensätze in dieser Applikation hinzugefügt, bearbeitet oder gelöscht werden.
         \n \n
-        Darüber hinaus lässt sich die Datenbank-Datei mit einem Editor (z.B. Notepad++) öffnen, sämtlicher Inhalt ist aber verschlüsselt und nicht lesbar!
+        Der Speicherort der Datenbank ist \data\database. Öffnen lässt sie sich mit Hilfe des DBBrowser-Tools for SQLCipher. Zum Öffnen wird das Passwort benötigt, welches vorher übergeben wurde.
+        \n \n
+        Darüber hinaus lässt sich die Datenbank mit einem Editor (z.B. Notepad++) öffnen, sämtlicher Inhalt ist aber verschlüsselt und nicht lesbar!
+
     </string>
 
     <string name="client_side_injection_beschreibung">
@@ -210,10 +212,14 @@
     </string>
 
     <string name="datenschutz_text">
-        Diese Applikation erhebt und verarbeitet keine personenbezogene Daten. In den Logdateien des Servers wird Ihre IP-Adresse nur in anonymisierter Form (ohne das letzte Byte) gespeichert.
+        Diese Applikation erhebt und verarbeitet keine personenbezogenen Daten. In den Logdateien des Servers wird Ihre IP-Adresse nur in anonymisierter Form (ohne das letzte Byte) gespeichert.
         \n \n
         Bei Benutzung des Auth0-Dienstes, werden Ihre IP- sowie E-Mail-Adresse gespeichert.
         \n \n
         Haben Sie sich einen Account über Auth0 erstellt, welcher gelöscht werden soll, kontaktieren Sie mich per E-Mail. Im Anschluss werde ich eine Löschung vornehmen.
+    </string>
+
+    <string name="enter_sql_cipher_text">
+        Hier bitte das Passwort für die Datenbank eingeben.
     </string>
 </resources>

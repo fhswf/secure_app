@@ -78,7 +78,7 @@ public class insecure_data_storage_test extends Fragment {
         button_sqlite_test = (Button)view.findViewById(R.id.button_sqlite);
         button_sqlite_test.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent in = new Intent(getActivity(), SQLcipher_database.class);
+                Intent in = new Intent(getActivity(), Splash_Activity.class);
                 startActivity(in);
             }
         });
