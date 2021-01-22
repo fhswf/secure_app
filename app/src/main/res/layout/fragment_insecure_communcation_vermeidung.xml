@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".insecure_communcation_vermeidung">
+    tools:context=".InsecureCommuncation_Vermeidung">
 
     <TextView
         android:layout_width="match_parent"

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="7"
-    tools:context=".Create_SQLcipher_Database_Password">
+    android:gravity="center"
+    tools:context=".CreateSQLCipherDBPasswordActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,14 +23,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
                     android:text="@string/sqlite_test"
+                    android:textSize="12dp"
                     android:gravity="center"></TextView>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right|center">
+                android:layout_height="match_parent">
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
@@ -38,6 +38,7 @@
         android:layout_height="0dp"
         android:weightSum="3"
         android:orientation="vertical"
+        android:layout_marginTop="20dp"
         android:layout_weight="2">
 
         <LinearLayout
@@ -71,7 +72,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
-                    android:background="@drawable/edit_text"
                     android:hint="Passwort"
                     android:inputType="textPassword"
                     android:id="@+id/passwort_sqlcipher"
@@ -95,7 +95,6 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
-                    android:background="@drawable/edit_text"
                     android:hint="Passwort bestätigen"
                     android:inputType="textPassword"
                     android:id="@+id/passwort_sqlcipher_confirmation"
@@ -116,9 +115,8 @@
             android:text="Datenbank erstellen"
             android:id="@+id/speicherbutton_sqlcipher"
             android:textAlignment="center"
+            android:textSize="18sp"
             android:padding="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="23sp"
             android:enabled="false">
         </Button>
 

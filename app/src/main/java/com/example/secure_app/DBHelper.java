@@ -19,6 +19,12 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Implementiert eine SQL-Cipher-Datenbank-Hilfsklasse.
+ * Hier werden sämtliche SQL-Operationen durchgeführt.
+ *
+ * @author Marcel Hopp
+ */
 public class DBHelper extends SQLiteOpenHelper {
 
     private static DBHelper instance;
@@ -26,7 +32,7 @@ public class DBHelper extends SQLiteOpenHelper {
     Context context;
 
     private static final int DATABASE_VER = 1;
-    public static final String DATABASE_NAME = "encrypted_database2.db";
+    public static final String DATABASE_NAME = "encrypted_database.db";
 
     public static final String TABLE_NAME = "CONTACTS";
     public static final String COLUMN_EMAIL = "EMAIL";
@@ -61,6 +67,10 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    /**
+     * Fügt eine neue E-Mail-Adresse ein.
+     * @param email gewünschte E-Mail-Adresse
+     */
     public void insertNewEmail(String email) {
         initialize_encrypted_shared_preferences();
         PASS_PHRASE = sharedPreferences.getString("password","");
@@ -73,6 +83,11 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Updatet eine E-Mail-Adresse.
+     * @param oldEmail zu ersetzende E-Mail-Adresse
+     * @param newEmail neue E-Mail-Adresse
+     */
     public void updateEmail(String oldEmail, String newEmail) {
         initialize_encrypted_shared_preferences();
         PASS_PHRASE = sharedPreferences.getString("password","");
@@ -84,6 +99,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Löscht eine E-Mail-Adresse.
+     * @param email gewünschte E-Mail-Adresse
+     */
     public void deleteEmail(String email) {
         initialize_encrypted_shared_preferences();
         PASS_PHRASE = sharedPreferences.getString("password","");
@@ -95,6 +114,9 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Gibt alle E-Mail-Adressen der Datenbank aus.
+     */
     public List<String> getAllEmail() {
         initialize_encrypted_shared_preferences();
         PASS_PHRASE = sharedPreferences.getString("password","");
@@ -115,6 +137,9 @@ public class DBHelper extends SQLiteOpenHelper {
         return emails;
     }
 
+    /**
+     * Funktion zum Initialisieren der EncryptedSharedPreferences.
+     */
     private void initialize_encrypted_shared_preferences()
     {
         String masterKeyAlias = null;

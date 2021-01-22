@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">SecureApp</string>
-
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 
     <string name="home_text">
-
-
             Herzlich Willkommen! \n\n
 
             Diese Applikation enthält technische Lösungen zu beliebten Sicherheitslücken in Android-Applikationen, basierend der OWASP Mobile Top 10 Risks.\n\n
@@ -14,51 +13,24 @@
             Mit einem Klick auf den Start-Button öffnet sich ein Hauptmenü, aus der die einzelne Schwachstelle heraus geöffnet werden kann. \n\n
 
             Viel Spaß! ;)
-
-
-    </string>
-    <string name="title_activity_main2">MainActivity2</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="title_activity_improper_platform_usage1">improper_platform_usage1</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <string name="beschreibung_improper_platform_usage">
-        Die Kategorie <b>Unpassende Benutzung der Plattform</b> beschreibt Schwachstellen, die auftreten, sobald sicherheitsrelevante Entwicklungsrichtlinien der Android-Plattform
-        nicht beachtet werden. \n\n
-        Insbesondere zählen hierzu Webdienste und API-Aufrufe, aber auch die Vergabe von Dateiberechtigungen.
-        Ein mögliches Angriffsszenario wäre beispielsweise das Ausnutzen dieser Sicherheitslücke mit Hilfe von Cross-Site-Scripting (XSS). Dies hat zur Folge,
-        dass sich der Angreifer Zugang zum Endgerät verschaffen kann, auf dem diese Applikation läuft. Im Bereich der Dateiberechtigungen
-        können die Berechtigungen MODE_WORLD_READABLE und MODE_WORLD_WRITEABLE für ungewollte Datenlecks sorgen.
     </string>
 
-    <string name="vermeidung_improper_platform_usage">
-        Vermeiden lässt sich diese Sicherheitslücke, indem die sicherheitsrelevanten Entwicklungsrichtlinien der Android-Plattform eingehalten werden. \n\n
-        Im Bereich der Dateiberechtigungen ist darauf zu achten, auf die beiden Berechtigungen MODE_WORLD_READABLE und MODE_WORLD_WRITEABLE zu verzichten.
-        Stattdessen sollte ein Content-Provider verwendet werden. Alternativ kann die Datei auch mit einem Schlüssel, der sich im AndroidKeyStore befindet
-        sowie einem Passwort versehen werden.
-    </string>
-
-    <string name="test_improper_improper_platform_usage">
-        Lorem Ipsum
-    </string>
 
     <string name="beschreibung_insecure_data_storage">
-        Die Kategorie Unsichere Datenspeicherung deckt Schwachstellen ab, die sich auf die Speicherung von Daten beziehen. Werden Daten nicht sicher gespeichert und
-        sind für unbefugte im Klartext lesbar, kann dies verheerende Folgen haben: Identitätsdiebstahl, Betrug oder auch der Vertrauensverlust den Anwendern
+        Die Kategorie Insecure Data Storage bzw. Unsichere Datenspeicherung deckt Schwachstellen ab, die sich auf die Speicherung von Daten beziehen.
+        \n\n
+        Werden Daten nicht sicher gespeichert und sind für unbefugte im Klartext lesbar, kann dies verheerende Folgen haben: Identitätsdiebstahl, Betrug oder auch der Vertrauensverlust den Anwendern
         gegenüber, speichert die eigene Applikation Daten nicht sicher und gelangt dies an die Öffentlichkeit.
         \n \n
         Ein mögliches Angriffsszenario ist der Dateisystemzugriff: In den SharedPreferences werden unverschlüsselte Daten im Dateisystem gespeichert.
         Standardmäßig sind diese Daten durch die Linux-Dateiberechtigungen geschützt. Sobald das Gerät aber gerootet ist, sind diese Daten leicht zugänglich.
-        \n \n
-        Ferner ist es möglich, über die Android Debug Bridge auf Sicherungsdateien der Applikation zuzugreifen.
-        \n \n
-        Darüber hinaus greift das Android-Betriebssystem auf eine lokale SQLite-Datenbank zurück. Diese ist standardmäßig unverschlüsselt und kann eingesehen werden.
+        \n
+        Weiterhin greift das Android-Betriebssystem auf das SQLite-Datenbanksystem zurück. Standardmäßig sind diese Datenbanken unverschlüsselt und können eingesehen werden.
+
     </string>
 
     <string name="vermeidung_insecure_data_storage">
-        Schwachstellen der Kategorie <b>Unsichere Datenspeicherung</b> lassen sich vermeiden, indem sämtliche Daten der Applikation verschlüsselt werden. \n \n
-        Darüber hinaus wird empfohlen, ADB-Sicherungen im Android-Manifest zu deaktivieren.
+        Schwachstellen der Kategorie Unsichere Datenspeicherung lassen sich vermeiden, indem sämtliche Daten der Applikation verschlüsselt werden.
         \n \n
         Um die SQLite-Datenbank zu verschlüsseln, kann das Tool SQLCipher von Zetetic genutzt werden.
          \n \n
@@ -67,33 +39,14 @@
 
     <string name="beschrebung_insecure_communiation">
         Diese Kategorie handelt von unzureichender bis zu fehlender verschlüsselten Kommunikation in den Bereichen TCP/IP, WLAN, Bluetooth, NFC, 3G, SMS etc.
-        Insbesondere zählen hierzu falsche oder veraltete SSL-Versionen und mangelnde Verschlüsselung der zu übertragenden Daten.
+        Insbesondere zählen hierzu falsche oder veraltete SSL/TLS-Versionen und mangelnde Verschlüsselung der zu übertragenden Daten.
         Besteht keine sichere Kommunikation bedeutet dies den kompletten Verlust der Ingetrität und der Vertraulichkeit sämtlicher, übertragener Daten.
     </string>
 
     <string name="vermeidung_insecure_communication">
-        Um die Kommunikation vor Man-in-the-Midle-Attacken abzusichern, sollten Zertifikate eingesetzt werden - möglichst mit langen Schlüsseln, ab 2048 Bit. Die Verwendung von selbst signierenden Zertifikaten ist zu unterbinden.
+        Um die Kommunikation vor Man-in-the-Midle-Attacken abzusichern, sollten Zertifikate eingesetzt werden - möglichst mit langen Schlüsseln, ab 2048 Bit.
         \n \n
         Außerdem sollten sichere Protokolle, wie beispielsweise TLSv3 und SHA2-Cipher-Suites verwendet werden.
-        \n \n
-        Ferner sollte nach Fertigstellung der Applikation sämtlicher Programmcode entfernt werden, der es der Anwendung möglicherweise
-        ermöglicht, Zertifikate, wie org.apache.http.conn.ssl.AllowAllHostnameVerifier oder SSL SocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER zu akzeptieren.
-        Beide sorgen für das Vertrauen in sämtliche Zertifikate.
-    </string>
-
-    <string name="beschreibung_insecure_authentication">
-        Da Geräte wie das Smartphone oder Tablet durch ihren Geräteformfaktor begrenzt sind und Kennwörter häufig nur aus 4 - 6-stelligen PINS bestehen, weisen mobile Applikationen
-        in der Regel schwächere Authentifizierungsschemata auf. \n \n
-        Kann die Authentifizierung umgangen werden, hat der Angreifer Zugriff auf für ihn unbefugte Bereiche und Daten.
-        Insbesondere tritt diese Schwachstelle auf, wenn schwache Passwortprotokolle, wie z.B. 4-stellige PINs verwendet werden.
-        Weiterhin ist die Speicherung von Passwörtern für mobile Apps auf dem Gerät ein großes Risiko.
-    </string>
-
-    <string name="vermeidung_insecure_authentication">
-        Um eine sichere Authentifizierung zu gewährleisten, sollte diese serverseitig und nicht lokal durchgeführt werden. \n \n  Dateien, welche die Applikation zur Verfügung stellt,
-        sollten erst dann geladen werden, sobald die Authentifizierung erfolgreich war. \n \n Ferner sollten, wie bereits angesprochen, Kennwörter nicht auf dem Gerät gespeichert werden. \n \n
-        Weiterhin sollten Authentifizierungsmethoden, wie z.B. der physikalische Standort über GPS oder Geräteidentitäten vermieden werden, da diese leicht zu fälschen sind.
-        \n \n Abschließend wird eine dreistufige Multi-Faktor-Authentifizierung, empfohlen.
     </string>
 
     <string name="test_insecure_data_storage">
@@ -107,18 +60,19 @@
     </string>
 
     <string name="sqlite_test">
-        Hier wird eine, mit dem AES256-Algorithmus, verschlüsselte SQLite-Datenbank, lokal auf dem Endgerät/Emulator erstellt. Dazu wird SQL-Cipher genutzt. Diese Datenbank speichert ausschließlich E-Mail-Adressen.
+        Hier wird eine, mit dem AES256-Algorithmus, verschlüsselte SQLite-Datenbank, lokal auf dem Endgerät/Emulator erstellt. Dazu wird die Erweiterung SQL-Cipher genutzt. Diese Datenbank speichert ausschließlich E-Mail-Adressen.
         \n \n
         Die Datenbank muss mit einem Passwort versehen werden. Nachdem das Passwort erfolgreich übergeben wurde, wird eine verschlüsselte SQLite-Datenbank erzeugt. Anschließend können einzelne Datensätze in dieser Applikation hinzugefügt, bearbeitet oder gelöscht werden.
         \n \n
-        Der Speicherort der Datenbank ist \data\database. Öffnen lässt sie sich mit Hilfe des DBBrowser-Tools for SQLCipher. Zum Öffnen wird das Passwort benötigt, welches vorher übergeben wurde.
+        Der Speicherort der Datenbank ist /data/database/encrypted_database.db. Öffnen lässt sie sich mit Hilfe des DBBrowser-Tools for SQLCipher. Zum Öffnen wird das Passwort benötigt, welches vorher übergeben wurde.
         \n \n
         Darüber hinaus lässt sich die Datenbank mit einem Editor (z.B. Notepad++) öffnen, sämtlicher Inhalt ist aber verschlüsselt und nicht lesbar!
-
+        \n \n
+        Das Passwort muss aus mindestens 8 Zeichen bestehen, darunter mindestens eine Ziffer, einen Klein- sowie Großbuchstaben und ein Sonderzeichen.
     </string>
 
     <string name="client_side_injection_beschreibung">
-        Schwachstellen der Kategorie Client Side Injection beschreiben Sicherheitslücken, die Angriffe, wie SQL-Injections oder Cross-Site-Scripting-Angrife
+        Schwachstellen der Kategorie Client Side Injection beschreiben Sicherheitslücken, die Angriffe, wie SQL-Injections oder Cross-Site-Scripting-Angriffe
         ermöglichen. \n \n
         Diese Sicherheitslücke tritt auf, sobald es dem Angreifer gelingt, durch fehlende Eingabevalidierung, Schadcode in Eingabefenster einschleust.
         Dadurch kann Fehlverhalten ausgelöst werden, welches dem Angreifer ermöglicht, an sensible Daten zu gelangen.
@@ -126,12 +80,6 @@
 
     <string name="client_side_injection_vermeidung">
         Um SQL-Injections zu vermeiden, sollten beim Zugriff auf die Datenbank parametrisierte Abfragen verwendet werden.
-        \n \n
-        XSS lässt sich unterbinden, indem in sämtlichen WebViews JavaScript sowie sonstige Plugins deaktiviert sind.
-        \n \n
-        Weiterhin sollte der Dateisystemzugriff für alle WebViews deaktiviert sein.
-        \n \n
-        Abschließend sollte überprüft werden, ob Aktion und Data der Intents über einen IntentFilter validiert wurden.
     </string>
 
     <string name="login_dialog">
@@ -141,7 +89,7 @@
     </string>
 
     <string name="danksagungen">
-        Besonderer Dank geht an Dr. Mario Kubek, welcher mir dieses Thema vorgeschlagen und hilfreiche Ratschläge im Bereich Mobile Security gegeben hat.
+        Besonderer Dank geht an Dr. Mario Kubek, welcher mir dieses Thema für meine Bachelorarbeit vorgeschlagen und hilfreiche Ratschläge im Bereich Mobile Security gegeben hat.
         \n \n
         Weiterhin bedanke ich mich bei Prof. Dr. Christian Gawron für die Hilfestellungen im Bereich des Hostings und Veröffentlichung dieser Applikation.
     </string>
@@ -171,9 +119,9 @@
     </string>
 
     <string name="xss_sqli_text">
-        Im folgenden können Cross Site Scripting (XSS) und SQLite-Injections getestet werden.
+        Im folgenden können SQL-Injections getestet werden.
         \n
-        Dazu einfach auf den gewünschten Button klicken und den dortigen Anweisungen folgen.
+        Dazu einfach auf den Button klicken und den dortigen Anweisungen folgen.
     </string>
 
     <string name="insecure_communication_test_string">
@@ -181,34 +129,29 @@
         \n \n
         Das Backend stellt einen öffentlichen API-Endpunkt bereit, der die aktuelle Serveruhrzeit zurückgibt.
         \n \n
-        Zum Testen der Verschlüsselung kann auf die Burp Suite zurückgegriffen werden. Hier wird ausschließlich eine verschlüsselte Kommunikation zu sehen sein.
+        Zum Testen der Verschlüsselung kann auf Wireshark zurückgegriffen werden. Um den Traffic zum Backend herauszufiltern, muss folgender Filter verwendet werden: \n  ip.addr == 193.174.71.211. \n Dieser zeigt lediglich den Datenverkehr zwischen Emulator und Backend an.
     </string>
 
 
     <string name="com_auth0_client_id">0kWtHmLURySF83cUfki2iZPjh8L4Inun</string>
     <string name="com_auth0_domain">dev-dqjyvzmz.eu.auth0.com</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
-    <string name="login">Log In</string>
-    <string name="logout">Log Out</string>
 
     <string name="how_to_start">
-        Zur Benutzung dieser Applikation wird empfohlen, einen Android-Emulator auf einem Kali-Linux-System zu installieren. Kali Linux bringt Tools mit, welche für das Testen der Sicherheit dieser Applikation geeignet sind.
+        Zur Benutzung dieser Applikation wird empfohlen, einen Android-Emulator, wie z.B. Genymotion zu verwenden.
         \n\n
-        Weiterhin sollte auf dem Emulator die Android Debug Bridge (ADB) installiert sein, dadurch kann auf die lokal gespeicherten Daten der Applikation zugegriffen werden.
+        Weiterhin sollte auf dem Emulator die Android Debug Bridge (ADB) installiert sein, dadurch ist der Zugriff auf die lokal gespeicherten Daten der Applikation möglich.
         \n\n
         Selbstverständlich kann diese Applikation auch auf einem normalen Smartphone, Tablet installiert werden.
     </string>
 
     <string name="sqlinjection_text">
-        Im folgenden können SQL-Injections getestet werden. Anmerkung: Die Datenbank wurde mit dem Passwort password verschlüsselt, falls die Datenbank über den SQLBrowser eingesehen werden soll.
+        Im folgenden können SQL-Injections getestet werden. Die Datenbank enthält zwei Datensätze und wurde unverschlüsselt implementiert, um trotz der Maßnahmen gegen SQL-Injections einen Einblick in die Datenbank zu bekommen.
+        \n\n
+        Zum Testen der Maßnahmen gegen SQL-Injections können Sie in das Suchfeld beispielsweise folgende Payloads eingeben:
+        \n\n
+        admin\' or \'1\'=\'1
+        \n
+        a\'or\'1\'=\'1
     </string>
 
     <string name="datenschutz_text">
@@ -220,6 +163,6 @@
     </string>
 
     <string name="enter_sql_cipher_text">
-        Hier bitte das Passwort für die Datenbank eingeben.
+        Hier das Passwort für die Datenbank eingeben.
     </string>
 </resources>

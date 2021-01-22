@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.secure_app">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,56 +13,57 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Bridge">
+
+        <activity
+            android:name=".SQLInjectionActivity"
+            android:parentActivityName=".ClientSideInjectionActivity"/>
         <activity
             android:name=".Splash_Activity"
-            android:parentActivityName=".insecure_data_storage" />
+            android:parentActivityName=".InsecureDataStorageActivity" />
         <activity
-            android:name=".Enter_SQLcipher_Database_Password"
-            android:parentActivityName=".insecure_data_storage"/>
+            android:name=".EnterSQLCipherDBPasswordActivity"
+            android:parentActivityName=".InsecureDataStorageActivity" />
         <activity
-            android:name=".Open_SQLcipher_database"
-            android:parentActivityName=".insecure_data_storage"/>
+            android:name=".OpenSQLCipherDatabase_Activity"
+            android:parentActivityName=".InsecureDataStorageActivity" />
         <activity
-            android:name=".Hinweise_Datenschutz"
-            android:parentActivityName=".MainMenu" />
+            android:name=".HinweiseDatenschutzActivity"
+            android:parentActivityName=".MainMenu_Activity" />
         <activity
             android:name=".LoginActivity"
-            android:parentActivityName=".MainMenu" />
+            android:parentActivityName=".MainMenu_Activity" />
         <activity
-            android:name=".ProtectedAPI"
-            android:parentActivityName=".MainMenu" />
+            android:name=".ProtectedAPI_Activity"
+            android:parentActivityName=".MainMenu_Activity"/>
         <activity
-            android:name=".SQLi_Injection"
-            android:parentActivityName=".MainMenu" />
+            android:name=".HowToStart_Activity"
+            android:parentActivityName=".MainMenu_Activity" />
         <activity
-            android:name=".HowToStart"
-            android:parentActivityName=".MainMenu" />
+            android:name=".InsecureCommunication_Test_HTTPS_Activity"
+            android:parentActivityName=".InsecureCommunicationActivity" />
         <activity
-            android:name=".insecure_communication_test_https"
-            android:parentActivityName=".insecure_communication" />
+            android:name=".WeiterfuehrendeLinksActivity"
+            android:parentActivityName=".MainMenu_Activity" />
         <activity
-            android:name=".Weiterfuehrende_Links"
-            android:parentActivityName=".MainMenu" />
+            android:name=".Danksagungen_Activity"
+            android:parentActivityName=".MainMenu_Activity" />
         <activity
-            android:name=".Danksagungen"
-            android:parentActivityName=".MainMenu" />
+            android:name=".ClientSideInjectionActivity"
+            android:parentActivityName=".MainMenu_Activity" />
         <activity
-            android:name=".client_side_injection"
-            android:parentActivityName=".MainMenu" />
+            android:name=".CreateSQLCipherDBPasswordActivity"
+            android:parentActivityName=".InsecureDataStorageActivity" />
         <activity
-            android:name=".Create_SQLcipher_Database_Password"
-            android:parentActivityName=".insecure_data_storage" />
+            android:name=".EncryptedSharedPreferencesTestActivity"
+            android:parentActivityName=".InsecureDataStorageActivity" />
         <activity
-            android:name=".SharedPrefsTest"
-            android:parentActivityName=".insecure_data_storage" />
+            android:name=".InsecureCommunicationActivity"
+            android:parentActivityName=".MainMenu_Activity" />
         <activity
-            android:name=".insecure_communication"
-            android:parentActivityName=".MainMenu" />
+            android:name=".InsecureDataStorageActivity"
+            android:parentActivityName=".MainMenu_Activity" />
         <activity
-            android:name=".insecure_data_storage"
-            android:parentActivityName=".MainMenu" />
-        <activity
-            android:name=".MainMenu"
+            android:name=".MainMenu_Activity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

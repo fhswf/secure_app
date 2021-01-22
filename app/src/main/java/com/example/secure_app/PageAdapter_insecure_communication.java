@@ -6,11 +6,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 /**
- * Diese Klasse implementiert einen Pageadapter für die Schwachstelle Client Side Injection.
+ * Diese Klasse implementiert einen Pageadapter für die Schwachstelle Insecure Communication
  *
  * @author Marcel Hopp
  */
-public class PageAdapter_client_side_injection extends FragmentPagerAdapter
+public class PageAdapter_insecure_communication extends FragmentPagerAdapter
 {
     int tabcount;
 
@@ -19,18 +19,19 @@ public class PageAdapter_client_side_injection extends FragmentPagerAdapter
      * @param fm
      * @param behavior
      */
-    public PageAdapter_client_side_injection(@NonNull FragmentManager fm, int behavior) {
+    public PageAdapter_insecure_communication(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
         tabcount = behavior;
     }
 
+    @NonNull
     @Override
     public Fragment getItem(int position) {
         switch(position)
         {
-            case 0 : return new ClientSideInjection_Beschreibung();
-            case 1 : return new ClientSideInjection_Vermeidung();
-            case 2 : return new ClientSideInjection_Test();
+            case 0 : return new InsecureCommunication_Beschreibung();
+            case 1 : return new InsecureCommuncation_Vermeidung();
+            case 2 : return new InsecureCommunication_Test();
             default: return null;
         }
     }

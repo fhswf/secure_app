@@ -10,6 +10,13 @@ import android.view.View;
 
 import androidx.appcompat.widget.AppCompatButton;
 
+/**
+ * Diese Klasse prüft das Vorhandensein einer Internetverbindung zur Laufzeit der Applikation.
+ * Falls keine Internetverbindung vorhanden ist, wird eine entsprechende Meldung ausgegeben.
+ *
+ * @author Marcel Hopp
+ */
+
 public class NetworkChangeListener extends BroadcastReceiver {
 
     @Override

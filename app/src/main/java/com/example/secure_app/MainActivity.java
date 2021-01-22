@@ -1,11 +1,9 @@
 /**
- *
  * Diese Klasse implementiert die MainActivity der Applikation.
  * Neben einem Willkommenstext wird auch ein Button angezeigt, welcher mit einem Klick das Hauptmenü öffnet.
  *
- * @author Marcel Dominik Hopp
+ * @author Marcel Hopp
  * @version 1.0
- *
  */
 
 package com.example.secure_app;
@@ -29,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-
         button = (Button) findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
      * Wird mit einem Klick des Start-Buttons aufgerufen.
      */
     public void openMainMenu() {
-        Intent intent = new Intent(this, MainMenu.class);
+        Intent intent = new Intent(this, MainMenu_Activity.class);
         startActivity(intent);
     }
 }

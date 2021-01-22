@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
         credentialsManager.getCredentials(new BaseCallback<Credentials, CredentialsManagerException>() {
             @Override
             public void onSuccess(final Credentials credentials) {
-                Intent intent = new Intent(LoginActivity.this, ProtectedAPI.class);
+                Intent intent = new Intent(LoginActivity.this, ProtectedAPI_Activity.class);
                 intent.putExtra(EXTRA_ACCESS_TOKEN, credentials.getAccessToken());
                 intent.putExtra(EXTRA_ID_TOKEN, credentials.getIdToken());
                 startActivity(intent);
@@ -172,6 +172,9 @@ public class LoginActivity extends AppCompatActivity {
         }
     };
 
+    /**
+     * Prüft zur Laufzeit, ob eine Internetverbindung besteht und gibt ggf. eine Meldung aus.
+     */
     @Override
     protected void onStart() {
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);

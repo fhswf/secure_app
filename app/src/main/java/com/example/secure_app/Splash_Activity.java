@@ -1,7 +1,7 @@
 package com.example.secure_app;
 
 /**
- * Diese Klasse implementiert die Splash-Activity.
+ * Diese Klasse implementiert eine Splash-Activity, welche prüft, ob ein Passwort für die Datenbank gesetzt wurde.
  *
  * @author Marcel Hopp
  */
@@ -54,18 +54,21 @@ public class Splash_Activity extends AppCompatActivity {
 
     private void open_create_sqlcipher_database_password_activity()
     {
-        Intent intent = new Intent(getApplicationContext(), Create_SQLcipher_Database_Password.class);
+        Intent intent = new Intent(getApplicationContext(), CreateSQLCipherDBPasswordActivity.class);
         startActivity(intent);
         finish();
     }
 
     private void open_enter_sqlcipher_database_password_activity()
     {
-        Intent intent = new Intent(getApplicationContext(), Enter_SQLcipher_Database_Password.class);
+        Intent intent = new Intent(getApplicationContext(), EnterSQLCipherDBPasswordActivity.class);
         startActivity(intent);
         finish();
     }
 
+    /**
+     * Funktion zum Initialisieren der EncryptedSharedPreferences.
+     */
     private void initialize_encrypted_shared_preferences()
     {
         String masterKeyAlias = null;

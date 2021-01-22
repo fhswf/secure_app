@@ -4,8 +4,19 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+/**
+ * Diese Klasse implementiert die Prüfung nach einer vorhandenen Internetverbindung.
+ *
+ * @author: Marcel Hopp
+ */
+
 public class Common {
 
+    /**
+     * Funktion, die eine vorhandene Internetverbindung prüft.
+     * @param context
+     * @return true, sobald eine Internetverbindung festgestellt wurde.
+     */
     public static boolean isConnected(Context context)
     {
         ConnectivityManager connectivityManager = (ConnectivityManager)
@@ -23,10 +34,6 @@ public class Common {
                 }
             }
         }
-
         return false;
-    }
-
-    public static class ToDoListAdapter {
     }
 }

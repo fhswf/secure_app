@@ -3,28 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".client_side_injection_test">
+    tools:context=".ClientSideInjection_Test">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="@string/xss_sqli_text"
-        android:id="@+id/view"
+        android:id="@+id/sqlite_injection_textview"
         android:gravity="center"
         android:textSize="17dp"
         android:layout_marginTop="250dp"
         />
-
-    <Button
-        android:id="@+id/button_xss_xml"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cross Site Scripting (XSS)"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:padding="20dp"
-        android:layout_below="@id/view">
-    </Button>
 
     <Button
         android:id="@+id/sqlite_injection_xml"
@@ -34,7 +23,7 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:padding="20dp"
-        android:layout_below="@id/button_xss_xml">
+        android:layout_below="@id/sqlite_injection_textview">
     </Button>
 
 

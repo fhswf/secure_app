@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenu">
+    tools:context=".MainMenu_Activity">
 
 
     <RelativeLayout
@@ -61,7 +61,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="XSS und SQLi"
+                android:text="SQLite-Injections"
                 android:id="@+id/client_side_injection_button_xml"
                 android:textAlignment="center"
                 android:padding="15dp"
