@@ -7,12 +7,12 @@
     tools:context=".HowToStart_Activity">
 
     <TextView
+        android:id="@+id/text_how_to_start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/how_to_start"
         android:textSize="20dp"
         android:gravity="center"
-        android:textColor="@color/white"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp">
     </TextView>

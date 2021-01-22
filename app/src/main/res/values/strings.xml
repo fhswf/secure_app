@@ -142,6 +142,7 @@
         Weiterhin sollte auf dem Emulator die Android Debug Bridge (ADB) installiert sein, dadurch ist der Zugriff auf die lokal gespeicherten Daten der Applikation möglich.
         \n\n
         Selbstverständlich kann diese Applikation auch auf einem normalen Smartphone, Tablet installiert werden.
+        \n\n Weitere Informationen gibt es <a href="https://github.com/MaHo1194/secure_app#anleitung-zum-testen-der-einzelnen-schwachstellen">hier.</a>
     </string>
 
     <string name="sqlinjection_text">
