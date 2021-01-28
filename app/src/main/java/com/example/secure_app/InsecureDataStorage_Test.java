@@ -13,10 +13,10 @@ import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link insecureDataStorage_Test#newInstance} factory method to
+ * Use the {@link InsecureDataStorage_Test#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class insecureDataStorage_Test extends Fragment {
+public class InsecureDataStorage_Test extends Fragment {
     private Button button_shared_prefs_test, button_sqlite_test;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -28,7 +28,7 @@ public class insecureDataStorage_Test extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public insecureDataStorage_Test() {
+    public InsecureDataStorage_Test() {
         // Required empty public constructor
     }
 
@@ -41,8 +41,8 @@ public class insecureDataStorage_Test extends Fragment {
      * @return A new instance of fragment insecure_data_storage_test.
      */
     // TODO: Rename and change types and number of parameters
-    public static insecureDataStorage_Test newInstance(String param1, String param2) {
-        insecureDataStorage_Test fragment = new insecureDataStorage_Test();
+    public static InsecureDataStorage_Test newInstance(String param1, String param2) {
+        InsecureDataStorage_Test fragment = new InsecureDataStorage_Test();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

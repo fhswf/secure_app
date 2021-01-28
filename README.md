@@ -39,7 +39,7 @@ Die Speicherung in den EncryptedSharedPreferences lässt sich testen, indem im E
 Um die Datei zu öffnen, muss in der ADB-Shell folgender Befehl abgesetzt werden:
 
 ```
-adb pull /data/data/shared_prefs/encrypted_shared_prefs.xml <Zielpfad>
+adb pull /data/data/com.example.secure_app/shared_prefs/encrypted_shared_prefs.xml <Zielpfad>
 ```
 
 Anschließend kann die XML-Datei beispielsweise mit Notepad++ geöffnet werden.
@@ -55,7 +55,7 @@ Bei der Erstbenutzung muss ein Passwort ausgewählt werden. Dieses wird lokal in
 Um die Verschlüsselung der Datenbank zu testen, muss in der ADB-Shell folgender Befehl abgesetzt werden:
 
 ```
-adb pull /data/data/databases/encrypted_database.db <Zielpfad>
+adb pull /data/data/databases/com.example.secure_app/encrypted_database.db <Zielpfad>
 ```
 
 Anschließend kann die Datenbank mit dem DB-Browser und dem Passwort geöffnet werden.

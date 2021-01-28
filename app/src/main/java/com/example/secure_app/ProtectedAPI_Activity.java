@@ -89,7 +89,7 @@ public class ProtectedAPI_Activity extends AppCompatActivity {
                 .url(API_URL);
         if (sendToken) {
             if (accessToken == null) {
-                Toast.makeText(ProtectedAPI_Activity.this, "Token not found. Log in first.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ProtectedAPI_Activity.this, "Token nicht gefunden, bitte zuerst einloggen!", Toast.LENGTH_SHORT).show();
                 return;
             }
             reqBuilder.addHeader("Authorization", "Bearer " + accessToken);

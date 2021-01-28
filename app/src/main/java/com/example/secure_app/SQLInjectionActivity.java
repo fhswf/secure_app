@@ -26,7 +26,7 @@ public class SQLInjectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("SQLite-Injections: Test");
+        getSupportActionBar().setTitle("SQLite-Injections-Test");
 
         try {
             String SQL = "INSERT INTO sqliuser(user, password, phone_number) VALUES (?, ?, ?)";
@@ -35,6 +35,7 @@ public class SQLInjectionActivity extends AppCompatActivity {
             mDB.execSQL("DROP TABLE IF EXISTS sqliuser;");
             mDB.execSQL("CREATE TABLE IF NOT EXISTS sqliuser(user VARCHAR, password VARCHAR, phone_number VARCHAR);");
 
+            /** Parst die übergebenen Werte als SQL-Parameter. */
             SQLiteStatement statement = mDB.compileStatement(SQL);
             statement.bindString(1, "admin");
             statement.bindString(2, "passwd123");
@@ -53,14 +54,20 @@ public class SQLInjectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_s_q_l_injection);
     }
 
+    /**
+     * Sucht in der Datenbank nach dem übergebenen String.
+     * @param view
+     */
     public void search(View view) {
         EditText srchtxt = (EditText) findViewById(R.id.sqlite_injection_editText);
 
         try {
             String SQL = "select * from sqliuser where user = ?";
 
+            /**Parst den übergebenen String als Parameter */
             Cursor cursor = mDB.rawQuery(SQL, new String[]{srchtxt.getText().toString()});
             StringBuilder strb = new StringBuilder("");
+
             if ((cursor != null) && (cursor.getCount() > 0)) {
                 cursor.moveToFirst();
 

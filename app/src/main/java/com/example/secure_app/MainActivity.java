@@ -1,11 +1,3 @@
-/**
- * Diese Klasse implementiert die MainActivity der Applikation.
- * Neben einem Willkommenstext wird auch ein Button angezeigt, welcher mit einem Klick das Hauptmenü öffnet.
- *
- * @author Marcel Hopp
- * @version 1.0
- */
-
 package com.example.secure_app;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-    private Button button;
+/**
+ * Diese Klasse implementiert die MainActivity der Applikation.
+ * Neben einem Willkommenstext wird auch ein Button angezeigt, welcher mit einem Klick das Hauptmenü öffnet.
+ *
+ * @author Marcel Hopp
+ * @version 1.0
+ */
 
-    NetworkChangeListener networkChangeListener = new NetworkChangeListener();
+public class MainActivity extends AppCompatActivity {
+    private Button button_openMainMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        button = (Button) findViewById(R.id.button);
+        button_openMainMenu = (Button) findViewById(R.id.button);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        button_openMainMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openMainMenu();

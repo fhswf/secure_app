@@ -23,6 +23,7 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Hauptmenü");
 
@@ -90,7 +91,7 @@ public class MainMenu extends AppCompatActivity {
      */
     public void open_link_activity()
     {
-        Intent intent = new Intent(this, Weiterfuehrende_Links.class);
+        Intent intent = new Intent(this, WeiterfuehrendeLinksActivity.class);
         startActivity(intent);
     }
 
@@ -99,7 +100,7 @@ public class MainMenu extends AppCompatActivity {
      */
     public void open_insecure_data_storage_activity()
     {
-        Intent intent = new Intent(this, insecure_data_storage.class);
+        Intent intent = new Intent(this, InsecureDataStorageActivity.class);
         startActivity(intent);
     }
 
@@ -108,7 +109,7 @@ public class MainMenu extends AppCompatActivity {
      */
     public void open_insecure_communication_activity()
     {
-        Intent intent = new Intent(this, insecure_communication.class);
+        Intent intent = new Intent(this, InsecureCommunicationActivity.class);
         startActivity(intent);
     }
 
@@ -125,7 +126,7 @@ public class MainMenu extends AppCompatActivity {
      */
     public void open_client_side_injection_activity()
     {
-        Intent intent = new Intent(this, client_side_injection.class);
+        Intent intent = new Intent(this, ClientSideInjectionActivity.class);
         startActivity(intent);
     }
 
@@ -134,7 +135,7 @@ public class MainMenu extends AppCompatActivity {
      */
     public void open_how_to_start_activity()
     {
-        Intent intent = new Intent(this, HowToStart.class);
+        Intent intent = new Intent(this, HowToStart_Activity.class);
         startActivity(intent);
     }
 
@@ -143,7 +144,7 @@ public class MainMenu extends AppCompatActivity {
      */
     public void open_datenschutz_activity()
     {
-        Intent intent = new Intent(this, Hinweise_Datenschutz.class);
+        Intent intent = new Intent(this, HinweiseDatenschutzActivity.class);
         startActivity(intent);
     }
 

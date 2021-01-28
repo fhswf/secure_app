@@ -30,7 +30,7 @@ public class PageAdapter_data_storage extends FragmentPagerAdapter
         {
             case 0 : return new InsecureDataStorage_Beschreibung();
             case 1 : return new InsecureDataStorage_Vermeidung();
-            case 2 : return new insecureDataStorage_Test();
+            case 2 : return new InsecureDataStorage_Test();
             default: return null;
         }
     }

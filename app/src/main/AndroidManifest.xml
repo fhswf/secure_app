@@ -45,9 +45,6 @@
             android:name=".WeiterfuehrendeLinksActivity"
             android:parentActivityName=".MainMenu_Activity" />
         <activity
-            android:name=".Danksagungen_Activity"
-            android:parentActivityName=".MainMenu_Activity" />
-        <activity
             android:name=".ClientSideInjectionActivity"
             android:parentActivityName=".MainMenu_Activity" />
         <activity
