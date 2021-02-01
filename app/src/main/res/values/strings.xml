@@ -56,7 +56,7 @@
     <string name="shared_prefs_text">
         Um die Sicherheit der SharedPreferences zu testen, bitte im ersten Fenster einen beliebigen String eingeben. Anschließend wird dieser zur Kontrolle im unteren Fenster ausgegeben.
         \n \n
-        Die SharedPreferences lassen sich nun im Ordner /data/shared_prefs/encrypted_shared_prefs.xml finden. Der übergebene String wurde mit dem AES256-Algorithmus verschlüsselt.
+        Die SharedPreferences lassen sich hier finden: /data/data/com.example.secure_app/shared_prefs/encrypted_shared_prefs.xml. Der übergebene String wurde mit dem AES256-Algorithmus verschlüsselt.
     </string>
 
     <string name="sqlite_test">
@@ -64,7 +64,7 @@
         \n \n
         Die Datenbank muss mit einem Passwort versehen werden. Nachdem das Passwort erfolgreich übergeben wurde, wird eine verschlüsselte SQLite-Datenbank erzeugt. Anschließend können einzelne Datensätze in dieser Applikation hinzugefügt, bearbeitet oder gelöscht werden.
         \n \n
-        Der Speicherort der Datenbank ist /data/database/encrypted_database.db. Öffnen lässt sie sich mit Hilfe des DBBrowser-Tools for SQLCipher. Zum Öffnen wird das Passwort benötigt, welches vorher übergeben wurde.
+        Der Speicherort der Datenbank ist /data/data/databases/com.example.secure_app/encrypted_database.db. Öffnen lässt sie sich mit Hilfe des DBBrowser-Tools for SQLCipher. Zum Öffnen wird das Passwort benötigt, welches vorher übergeben wurde.
         \n \n
         Darüber hinaus lässt sich die Datenbank mit einem Editor (z.B. Notepad++) öffnen, sämtlicher Inhalt ist aber verschlüsselt und nicht lesbar!
         \n \n
@@ -141,16 +141,15 @@
         \n\n
         Weiterhin sollte auf dem Emulator die Android Debug Bridge (ADB) installiert sein, dadurch ist der Zugriff auf die lokal gespeicherten Daten der Applikation möglich.
         \n\n
-        Selbstverständlich kann diese Applikation auch auf einem normalen Smartphone, Tablet installiert werden.
-        \n\n Weitere Informationen gibt es <a href="https://github.com/MaHo1194/secure_app#anleitung-zum-testen-der-einzelnen-schwachstellen">hier.</a>
+        Weitere Informationen gibt es <a href="https://github.com/MaHo1194/secure_app#anleitung-zum-testen-der-einzelnen-schwachstellen">hier.</a>
     </string>
 
     <string name="sqlinjection_text">
         Im folgenden können SQL-Injections getestet werden. Die Datenbank enthält zwei Datensätze und wurde unverschlüsselt implementiert, um trotz der Maßnahmen gegen SQL-Injections einen Einblick in die Datenbank zu bekommen.
         \n\n
-        Zum Testen der Maßnahmen gegen SQL-Injections können Sie in das Suchfeld beispielsweise folgende Payloads eingeben:
+        Zum Testen der Maßnahmen gegen SQL-Injections in das Suchfeld beispielsweise folgende Payloads übergeben werden:
         \n\n
-        admin\' or \'1\'=\'1
+        admin\'or\'1\'=\'1
         \n
         a\'or\'1\'=\'1
     </string>
