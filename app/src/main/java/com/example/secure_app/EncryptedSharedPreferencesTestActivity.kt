@@ -12,26 +12,46 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
 import kotlinx.android.synthetic.main.activity_shared_prefs_test.*
+import org.w3c.dom.Text
 
 class EncryptedSharedPreferencesTestActivity : AppCompatActivity() {
 
     private val encrypted_shared_prefs = "encrypted_shared_prefs"
     lateinit var sharedPreferences: SharedPreferences
+    lateinit var input_text: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_prefs_test)
+
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = "EncryptedSharedPreferences"
+
+        input_text = findViewById(R.id.eingabe_string_shared_prefs)
 
         encryptSharedPrefs()
         deleteData()
         loadData()
+
+        /** Text-Watcher-Objekt - prüft, ob das Eingabefeld leer ist.
+         *  Falls nein, wird der Speicherbutton freigeschaltet.
+         */
+        input_text.addTextChangedListener(object : TextWatcher
+        {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                speicherbutton_shared_prefs.isEnabled = true
+            }
+
+            override fun afterTextChanged(p0: Editable?) {}
+        })
 
         speicherbutton_shared_prefs.setOnClickListener{
             saveData()
@@ -65,18 +85,12 @@ class EncryptedSharedPreferencesTestActivity : AppCompatActivity() {
         val insertedText = eingabe_string_shared_prefs.text.toString()
         ausgabe_shared_prefs.text = insertedText
 
-        if(insertedText == "")
-        {
-            Toast.makeText(this, "Kein String übergeben!", Toast.LENGTH_SHORT).show();
-        }
-        else {
             val editor = sharedPreferences.edit()
             editor.apply{
                 putString("String_Key", insertedText)
             }.apply()
 
             Toast.makeText(this, "String gespeichert", Toast.LENGTH_SHORT).show()
-        }
     }
 
     /**

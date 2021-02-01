@@ -52,6 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Speichern"
+                    android:enabled="false"
                     android:id="@+id/speicherbutton_shared_prefs"></Button>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
