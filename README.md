@@ -10,12 +10,12 @@ Die Applikation beinhaltet technische Lösungen zu bestimmten Sicherheitslücken
 -----
 
 ## Download der APK
-https://github.com/MaHo1194/secure_app/releases/tag/v1.0
+https://github.com/fhswf/secure_app/releases/tag/v1.0
 
 ## Backend
 Der Quellcode des Backends kann hier eingesehen werden:
 
-https://github.com/MaHo1194/secure_app_backend
+https://github.com/fhswf/secure_app_backend
 
 -----
 
